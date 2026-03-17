@@ -49,4 +49,3 @@ require('lualine').setup {
     -- ... your lualine config
   }
 }
-
