@@ -1,14 +1,25 @@
 #!/usr/bin/env bash
 set -e
 
-# --------------------------
-# Helper: remove conflicting files
-# --------------------------
-remove_conflict() {
-    local target="$1"
-    if [ -e "$target" ] && [ ! -L "$target" ]; then
-        echo "Removing existing file: $target"
-        rm -rf "$target"
+DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
+CONFIG_TARGET="${XDG_CONFIG_HOME:-$HOME/.config}"
+
+mkdir -p "$CONFIG_TARGET"
+
+remove_target_config() {
+    local pkg="$1"
+    local target_dir="$CONFIG_TARGET/$pkg"
+    local source_dir="$DOTFILES_DIR/$pkg/.config/$pkg"
+
+    # Only act if the source package actually exists in the dotfiles repo
+    if [ ! -d "$source_dir" ]; then
+        echo "Skipping $pkg: source dir not found at $source_dir"
+        return
+    fi
+
+    if [ -e "$target_dir" ] || [ -L "$target_dir" ]; then
+        echo "Removing existing target: $target_dir"
+        rm -rf "$target_dir"
     fi
 }
 
@@ -20,35 +31,24 @@ curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --c
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # --------------------------
-# Stow dotfiles
+# Define configs to stow
 # --------------------------
-DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
-CONFIG_TARGET="$HOME/.config"
-
-echo "Preparing ~/.config..."
-mkdir -p "$CONFIG_TARGET"
-
-#-----------------------
-# stowed configs
-#----------------------
 PACKAGES=("nvim" "fish")
 
 for pkg in "${PACKAGES[@]}"; do
-    echo "Processing package: $pkg"
+    echo
+    echo "=== Processing $pkg ==="
 
-    # Find all files in the package
-    find "$DOTFILES_DIR/$pkg/.config" -type f | while read -r file; do
-        # Compute target location
-        relative_path="${file#$DOTFILES_DIR/$pkg/}"
-        target="$HOME/$relative_path"
+    remove_target_config "$pkg"
 
-        # Remove conflict if exists
-        remove_conflict "$target"
-    done
-
-    # Restow package (symlink creation)
     echo "Stowing $pkg..."
     stow --restow --dir="$DOTFILES_DIR" --target="$HOME" "$pkg"
 done
 
 echo "All packages stowed successfully."
+
+# --------------------------
+# Nvim PlugInstall once
+# --------------------------
+echo "Installing Neovim plugins..."
+nvim --headless +PlugInstall +qall
