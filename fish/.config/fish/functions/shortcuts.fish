@@ -2,6 +2,10 @@ function rmdir
     rm -rf $argv
 end
 
+function reboot-bios
+    systemctl reboot --firmware-setup
+end
+
 # Append common directories for executable files to $PATH
 fish_add_path ~/.local/bin ~/.cargo/bin ~/Applications/depot_tools
 
