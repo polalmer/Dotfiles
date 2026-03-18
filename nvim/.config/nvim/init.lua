@@ -9,14 +9,10 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 
--- activate an installed language server for vim
-vim.lsp.enable('pyright')
-
 --Plug Area
 vim.call('plug#begin')
     -- BottomInfobar
-    Plug('nvim-lualine/lualine.nvim')
-    Plug('neovim/nvim-lspconfig')
+    Plug('nvim-lualine/lualine.nvim'))
     -- Theme
     Plug('navarasu/onedark.nvim')
 vim.call('plug#end')
