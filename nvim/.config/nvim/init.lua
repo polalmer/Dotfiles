@@ -12,7 +12,7 @@ vim.opt.softtabstop = 4
 --Plug Area
 vim.call('plug#begin')
     -- BottomInfobar
-    Plug('nvim-lualine/lualine.nvim'))
+    Plug('nvim-lualine/lualine.nvim')
     -- Theme
     Plug('navarasu/onedark.nvim')
 vim.call('plug#end')
