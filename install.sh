@@ -13,7 +13,6 @@ remove_target_config() {
 
     # Only act if the source package actually exists in the dotfiles repo
     if [ ! -d "$source_dir" ]; then
-        echo "Skipping $pkg: source dir not found at $source_dir"
         return
     fi
 
@@ -33,7 +32,7 @@ curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --c
 # --------------------------
 # Define configs to stow
 # --------------------------
-PACKAGES=("nvim" "fish")
+PACKAGES=("nvim" "fish" "Xmodmap" "wired" "qtile")
 
 for pkg in "${PACKAGES[@]}"; do
     echo
