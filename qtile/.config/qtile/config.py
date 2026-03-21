@@ -1,29 +1,3 @@
-# Copyright (c) 2010 Aldo Cortesi
-# Copyright (c) 2010, 2014 dequis
-# Copyright (c) 2012 Randall Ma
-# Copyright (c) 2012-2014 Tycho Andersen
-# Copyright (c) 2012 Craig Barnes
-# Copyright (c) 2013 horsik
-# Copyright (c) 2013 Tao Sauvage
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-
 from libqtile import bar, layout, widget, hook, qtile
 from libqtile.config import Click, Drag, Group, Key, Match, hook, Screen, KeyChord
 from libqtile.lazy import lazy
@@ -84,7 +58,6 @@ keys = [
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
@@ -115,7 +88,8 @@ keys = [
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod1], "Space", lazy.spawn("rofi -theme rounded-green-dark -show drun"), desc="Spawn a command using a prompt widget"),
+    #Search App
+    Key([mod], "d", lazy.spawn("rofi -theme rounded-green-dark -show drun"), desc="Spawn a command using a prompt widget"),
 
 
 ##CUSTOM
@@ -234,21 +208,6 @@ screens = [
     Screen(
         top = bar.Bar(
             [   
-                widget.Spacer(
-                    length = 18,
-                    background = '#033C4B',
-                ),
-                
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/launch_Icon.png',
-                    background = '#033C4B',
-                    mouse_callbacks = {'Button1': open_launcher},
-                ),
-
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/6.png',
-                ),
-
                 widget.GroupBox(
                     fontsize = 16,
                     borderwidth = 0,
@@ -268,45 +227,11 @@ screens = [
                     disable_drag = True,
                  ),
 
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/5.png',
-                ),
-
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/2.png',
-                ),
-                
                 widget.CurrentLayout(
                     background ='#046F5F',
                     font = 'IBM Plex Mono Medium',
                     fontsize = 15,
                     padding = 0,
-                ),
-
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/5.png',                
-                ),
-
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/2.png',
-                ),
-
-                widget.WindowName(
-                    background = '#046F5F',
-                    format = "{name}",
-                    font = 'IBM Plex Mono Medium',
-                    fontsize = 14,
-                    empty_group_string = 'Desktop',
-                    padding = 0,
-                ),
-
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/5.png',                
-                ),  
-
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/1.png',                
-                    background = '#52548D',
                 ),
 
                 widget.CPU(
@@ -319,62 +244,12 @@ screens = [
                     mouse_callbacks = {'Button1': open_btop},
                 ),
 
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/5.png',
-                ),
-
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/2.png',                
-                    background = '#52548D',
-                ),  
-  
-                widget.Systray(
+               widget.Systray(
                     background = '#046F5F',
                     icon_size = 24,
                     padding = 3,
                 ),
 
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/5.png',
-                ),
-
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/2.png',                
-                    background = '#52548D',
-                ),                    
-                                                
-                widget.Spacer(
-                    length = 0,
-                    background = '#046f5f',
-                ),  
-               
-                widget.Memory(
-                    format = 'RAM:({MemUsed:.0f}MB/{MemTotal:.0f}MB)',
-                    font = "IBM Plex Mono Medium",
-                    fontsize = 15,
-                    padding = 0,
-                    background = '#046F5F',
-                    mouse_callbacks = {'Button1': open_btop},
-                ),
-
-                widget.Spacer(
-                    length = 6,
-                    background = '#046f5f',
-                ),  
-
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/Bar-Icons/volume.svg',
-                    background = '#046F5F',
-                    margin_y = 3,
-                    scale = True,
-                    mouse_callbacks = {'Button1': open_btop},
-                ),
-
-                widget.Spacer(
-                    length = 4,
-                    background = '#046f5f',
-                ), 
-                
                 widget.PulseVolume(
                     font= 'IBM Plex Mono Medium',
                     fontsize = 15,
@@ -382,42 +257,12 @@ screens = [
                     background = '#046F5F',
                 ),
 
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/5.png',
-                ),                
-
-
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/1.png',                
-                    background = '#4B427E',
-                ),
-
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/Bar-Icons/calendar.svg',
-                    background = '#046F5F',
-                    margin_y = 3,
-                    scale = True,
-                ),
-
-                widget.Spacer(
-                    length = 6,
-                    background = '#046f5f',
-                ), 
-        
                 widget.Clock(
                     format = '%d/%m/%y ', #Here you can change between USA or another timezone
                     background = '#046f5f',
                     font = "IBM Plex Mono Medium",
                     fontsize = 15,
                     padding = 0,
-                ),
-
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/Bar-Icons/clock.svg',
-                    background = '#046F5F',
-                    margin_y = 3,
-                    margin_x = 5,
-                    scale = True,
                 ),
 
                 widget.Clock(
@@ -427,12 +272,7 @@ screens = [
                     fontsize = 15,
                     padding = 0,
                 ),
-
-                widget.Spacer(
-                    length = 18,
-                    background = '#046f5f',
-                ),
-            ],
+           ],
             30,  # Bar size (all axis)
             margin = [0,8,6,8] # Bar margin (Top,Right,Bottom,Left)
         ),
