@@ -15,7 +15,11 @@ vim.call('plug#begin')
     Plug('nvim-lualine/lualine.nvim')
     -- Theme
     Plug('navarasu/onedark.nvim')
+    -- HexColor Highlighting
+    Plug('norcalli/nvim-colorizer.lua')
 vim.call('plug#end')
+
+require('colorizer').setup()
 
 -- Set onedark as colorschema
 require('onedark').setup  {
