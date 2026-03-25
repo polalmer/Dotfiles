@@ -1,6 +1,10 @@
 local vim = vim
 local Plug = vim.fn['plug#']
 
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.opt.termguicolors = true
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.number = true
@@ -17,6 +21,12 @@ vim.call('plug#begin')
     Plug('navarasu/onedark.nvim')
     -- HexColor Highlighting
     Plug('norcalli/nvim-colorizer.lua')
+    -- manage language servers
+    Plug('nvim-treesitter/nvim-treesitter')
+    --allow icons 
+    Plug ('nvim-tree/nvim-web-devicons')
+    --nvim file explorer
+    Plug('nvim-tree/nvim-tree.lua')
 vim.call('plug#end')
 
 require('colorizer').setup()
@@ -43,9 +53,31 @@ require('onedark').setup  {
 }
 require('onedark').load()
 
+--lualine config
 require('lualine').setup {
   options = {
     theme = 'onedark'
     -- ... your lualine config
   }
 }
+
+-- treesitter config
+require('nvim-treesitter').install { 
+    'javascript',
+    'python',
+    'sql',
+    'html',
+    'css',
+    'lua'
+}
+
+--devicons config
+require('nvim-web-devicons').setup{
+    color_icons = true;
+    default = true;
+    strict = true;
+}
+
+-- tree explorer config
+require('nvim-tree').setup()
+require("nvim-tree.api").tree.open()

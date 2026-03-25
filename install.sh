@@ -32,7 +32,7 @@ curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --c
 # --------------------------
 # Define configs to stow
 # --------------------------
-PACKAGES=("nvim" "fish" "Xmodmap" "wired" "qtile" "rofi")
+PACKAGES=("nvim" "fish" "Xmodmap" "wired" "qtile" "rofi" "fonts")
 
 for pkg in "${PACKAGES[@]}"; do
     echo
@@ -45,6 +45,11 @@ for pkg in "${PACKAGES[@]}"; do
 done
 
 echo "All packages stowed successfully."
+
+#---------------------------
+# rebuild font cache
+#---------------------------
+fc-cache -fv
 
 # --------------------------
 # Nvim PlugInstall once
