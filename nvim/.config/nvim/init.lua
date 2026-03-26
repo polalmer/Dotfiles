@@ -98,6 +98,9 @@ local function my_on_attach(bufnr)
     vim.keymap.del("n", "<C-t>", { buffer = bufnr })
     --custom mappings
     vim.keymap.set("n", "<C-t>", toggleTree, { desc = "Toggle nvim-tree" })
+    vim.keymap.set("n", "<Space>", api.node.open.edit, {desc = "Open"})
+    vim.keymap.set("n", "<C-h>", api.node.open.horizontal, {desc = "Open horizontal"})
+
 end 
 
 require('nvim-tree').setup{
