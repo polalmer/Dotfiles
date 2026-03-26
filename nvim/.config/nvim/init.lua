@@ -25,8 +25,6 @@ vim.call('plug#begin')
     Plug('nvim-treesitter/nvim-treesitter')
     --allow icons 
     Plug ('nvim-tree/nvim-web-devicons')
-    --nvim file explorer
-    Plug('nvim-tree/nvim-tree.lua')
 vim.call('plug#end')
 
 require('colorizer').setup()
@@ -76,34 +74,5 @@ require('nvim-web-devicons').setup{
     color_icons = true;
     default = true;
     strict = true;
-}
-
--- tree explorer config
-function toggleTree()
-    require("nvim-tree.api").tree.toggle({ focus = true })
-end
-
-vim.keymap.set("n", "<C-t>", toggleTree, { desc = "Toggle nvim-tree" })
-
-local function my_on_attach(bufnr)
-    local api = require "nvim-tree.api"
-
-    local function opts(desc)
-      return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
-    end
-
-    -- default mappings
-    api.map.on_attach.default(bufnr)
-    -- remove existing mapping
-    vim.keymap.del("n", "<C-t>", { buffer = bufnr })
-    --custom mappings
-    vim.keymap.set("n", "<C-t>", toggleTree, { desc = "Toggle nvim-tree" })
-    vim.keymap.set("n", "<Space>", api.node.open.edit, {desc = "Open"})
-    vim.keymap.set("n", "<C-h>", api.node.open.horizontal, {desc = "Open horizontal"})
-
-end 
-
-require('nvim-tree').setup{
-    on_attach = my_on_attach
 }
 
