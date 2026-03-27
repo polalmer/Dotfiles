@@ -23,8 +23,6 @@ vim.call('plug#begin')
     Plug('norcalli/nvim-colorizer.lua')
     -- manage language servers
     Plug('nvim-treesitter/nvim-treesitter')
-    --allow icons 
-    Plug ('nvim-tree/nvim-web-devicons')
 vim.call('plug#end')
 
 require('colorizer').setup()
@@ -67,12 +65,5 @@ require('nvim-treesitter').install {
     'html',
     'css',
     'lua'
-}
-
---devicons config
-require('nvim-web-devicons').setup{
-    color_icons = true;
-    default = true;
-    strict = true;
 }
 
