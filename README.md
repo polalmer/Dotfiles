@@ -1,18 +1,25 @@
-# Xmodmap
-Keycodes für Sondertasten, Touchpad etc
+# Apps
+Pacman and yay
+Run installApp.sh to install the packages from apps.json
 
-# Fish
-Shell configs (Farben, Abkürzfunktionen)
+# Dotfiles
+Run stowdotfiles.sh to symLink the repo folders to the user .config
 
-# Nvim
-Texteditor mit Programmier erweiterungen
+## Xmodmap
+Keycodes für specialkeys, touchpad etc
 
-# qtile
-Tilingwindowmanager mit Statusbar
+## Fish
+Shell configs (colors, abbreviations)
 
-# rofi
+## Nvim
+texteditor configs
+
+## qtile
+Tilingwindowmanager with statusbar
+
+## rofi
 Applauncher/searcher
 
-# wired
+## wired
 https://github.com/Toqozz/wired-notify
 Notification deamon und pop up

@@ -1,0 +1,15 @@
+{
+  "pacman": [
+    "qtile",
+    "rofi",
+    "ranger",
+    "nvim",
+    "btop",
+    "fish",
+    "lazygit",
+    "git"
+  ],
+  "AUR": [
+    "wired"
+  ]
+}
