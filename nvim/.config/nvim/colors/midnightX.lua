@@ -8,10 +8,8 @@ end
 vim.g.colors_name = "midnight_x"
 
 local c = {
-    bg         = "#000000", -- color 0
-    bg_soft    = "#1e1e1e", -- color 1
-    fg         = "#d2d2d2", -- color 2
-    fg_bright  = "#e6e6e6", -- color 3
+    background = "#1e1e1e", -- color 0
+    foreground = "#d2d2d2", -- color 2
 
     yellow     = "#facd28", -- 4
     blue       = "#6495ed", -- 5
@@ -35,30 +33,30 @@ end
 
 -- UI
 
-hi("Normal",       { fg=c.fg, bg=c.bg })
-hi("CursorLine",   { bg=c.bg_soft })
-hi("CursorColumn", { bg=c.bg_soft })
+hi("Normal",       { fg=c.foreground, bg=c.background })
+hi("CursorLine",   { bg=c.background })
+hi("CursorColumn", { bg=c.background })
 
 hi("Visual",       { bg=c.violet })
 hi("LineNr",       { fg=c.gray })
 hi("CursorLineNr", { fg=c.yellow })
 
-hi("StatusLine",   { fg=c.fg_bright, bg=c.bg_soft })
-hi("StatusLineNC", { fg=c.gray, bg=c.bg_soft })
+hi("StatusLine",   { fg=c.foreground, bg=c.background })
+hi("StatusLineNC", { fg=c.gray, bg=c.background })
 
-hi("VertSplit",    { fg=c.bg_soft })
-hi("WinSeparator", { fg=c.bg_soft })
+hi("VertSplit",    { fg=c.background })
+hi("WinSeparator", { fg=c.background })
 
-hi("Pmenu",        { fg=c.fg, bg=c.bg_soft })
-hi("PmenuSel",     { fg=c.bg, bg=c.violet })
+hi("Pmenu",        { fg=c.foreground, bg=c.background })
+hi("PmenuSel",     { fg=c.background, bg=c.violet })
 
-hi("Search",       { fg=c.bg, bg=c.yellow })
-hi("IncSearch",    { fg=c.bg, bg=c.orange })
+hi("Search",       { fg=c.background, bg=c.yellow })
+hi("IncSearch",    { fg=c.background, bg=c.orange })
 
-hi("Folded",       { fg=c.gray, bg=c.bg_soft })
+hi("Folded",       { fg=c.gray, bg=c.background })
 hi("FoldColumn",   { fg=c.gray })
 
-hi("SignColumn",   { bg=c.bg })
+hi("SignColumn",   { bg=c.background })
 
 -- Syntax
 
@@ -94,7 +92,7 @@ hi("Typedef",      { fg=c.violet })
 hi("Special",      { fg=c.pink })
 hi("SpecialChar",  { fg=c.pink })
 hi("Tag",          { fg=c.pink })
-hi("Delimiter",    { fg=c.fg })
+hi("Delimiter",    { fg=c.foreground })
 hi("SpecialComment",{ fg=c.gray })
 
 hi("Error",        { fg=c.red, bold=true })
@@ -133,35 +131,35 @@ hi("GitSignsDelete", { fg=c.red })
 
 local lualine_theme = {
     normal = {
-        a = { fg = c.bg, bg = c.blue, gui = "bold" },
-        b = { fg = c.fg, bg = c.bg_soft },
-        c = { fg = c.fg, bg = c.bg },
+        a = { fg = c.background, bg = c.blue, gui = "bold" },
+        b = { fg = c.foreground, bg = c.background },
+        c = { fg = c.foreground, bg = c.background },
     },
 
     insert = {
-        a = { fg = c.bg, bg = c.green, gui = "bold" },
-        b = { fg = c.fg, bg = c.bg_soft },
+        a = { fg = c.background, bg = c.green, gui = "bold" },
+        b = { fg = c.foreground, bg = c.background },
     },
 
     visual = {
-        a = { fg = c.bg, bg = c.violet, gui = "bold" },
-        b = { fg = c.fg, bg = c.bg_soft },
+        a = { fg = c.background, bg = c.violet, gui = "bold" },
+        b = { fg = c.foreground, bg = c.background },
     },
 
     replace = {
-        a = { fg = c.bg, bg = c.red, gui = "bold" },
-        b = { fg = c.fg, bg = c.bg_soft },
+        a = { fg = c.background, bg = c.red, gui = "bold" },
+        b = { fg = c.foreground, bg = c.background },
     },
 
     command = {
-        a = { fg = c.bg, bg = c.orange, gui = "bold" },
-        b = { fg = c.fg, bg = c.bg_soft },
+        a = { fg = c.background, bg = c.orange, gui = "bold" },
+        b = { fg = c.foreground, bg = c.background },
     },
 
     inactive = {
-        a = { fg = c.gray, bg = c.bg_soft },
-        b = { fg = c.gray, bg = c.bg_soft },
-        c = { fg = c.gray, bg = c.bg },
+        a = { fg = c.gray, bg = c.background },
+        b = { fg = c.gray, bg = c.background },
+        c = { fg = c.gray, bg = c.background },
     },
 }
 
