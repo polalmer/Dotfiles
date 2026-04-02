@@ -17,8 +17,6 @@ vim.opt.softtabstop = 4
 vim.call('plug#begin')
     -- BottomInfobar
     Plug('nvim-lualine/lualine.nvim')
-    -- Theme
-    Plug('navarasu/onedark.nvim')
     -- HexColor Highlighting
     Plug('norcalli/nvim-colorizer.lua')
     -- manage language servers
@@ -27,35 +25,15 @@ vim.call('plug#end')
 
 require('colorizer').setup()
 
--- Set onedark as colorschema
-require('onedark').setup  {
-    -- Main options --
-    style = 'warmer',
-    transparent = false,  -- Show/hide background
-    term_colors = true, -- Change terminal color as per the selected theme style
-    ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden
-    cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
-    
-    -- Change code style ---
-    -- Options are italic, bold, underline, none
-    -- You can configure multiple style with comma separated, For e.g., keywords = 'italic,bold'
-    code_style = {
-        comments = 'italic',
-        keywords = 'none',
-        functions = 'none',
-        strings = 'none',
-        variables = 'none'
-    },
-}
-require('onedark').load()
-
 --lualine config
-require('lualine').setup {
-  options = {
-    theme = 'onedark'
-    -- ... your lualine config
-  }
-}
+vim.cmd.colorscheme("midnightX")
+require("lualine").setup({
+    options = {
+        theme = midnightX_lualine_theme,
+        section_separators = "",
+        component_separators = "",
+    }
+})
 
 -- treesitter config
 require('nvim-treesitter').install { 
