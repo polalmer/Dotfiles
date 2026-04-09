@@ -18,12 +18,12 @@ vim.call('plug#begin')
     -- BottomInfobar
     Plug('nvim-lualine/lualine.nvim')
     -- HexColor Highlighting
-    Plug('norcalli/nvim-colorizer.lua')
+    --Plug('norcalli/nvim-colorizer.lua')
     -- manage language servers
-    Plug('nvim-treesitter/nvim-treesitter')
+    --Plug('nvim-treesitter/nvim-treesitter')
 vim.call('plug#end')
 
-require('colorizer').setup()
+--require('colorizer').setup()
 
 --lualine config
 vim.cmd.colorscheme("midnightX")
@@ -36,12 +36,12 @@ require("lualine").setup({
 })
 
 -- treesitter config
-require('nvim-treesitter').install { 
-    'javascript',
-    'python',
-    'sql',
-    'html',
-    'css',
-    'lua'
-}
+--require('nvim-treesitter').install { 
+--    'javascript',
+--    'python',
+--    'sql',
+--    'html',
+--    'css',
+--    'lua'
+--}
 
