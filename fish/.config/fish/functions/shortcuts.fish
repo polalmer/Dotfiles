@@ -13,6 +13,7 @@ fish_add_path ~/.local/bin ~/.cargo/bin ~/Applications/depot_tools
 # Replace ls with eza
 alias ls='eza --color=always --group-directories-first --icons=always' # preferred listing
 alias ll='eza -la --color=always --group-directories-first --icons=always'  # long format
+alias la='eza -a --color=always --group-directories-first --icons=always'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
