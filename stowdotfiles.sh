@@ -32,7 +32,7 @@ curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --c
 # --------------------------
 # Define configs to stow
 # --------------------------
-PACKAGES=("nvim" "fish" "Xmodmap" "fonts")
+PACKAGES=("sway" "nvim" "fish" "Xmodmap" "fonts")
 
 for pkg in "${PACKAGES[@]}"; do
     echo
