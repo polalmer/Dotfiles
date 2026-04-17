@@ -8,23 +8,23 @@ end
 vim.g.colors_name = "midnight_x"
 
 local c = {
-    background = "#1e1e1e", -- color 0
-    foreground = "#d2d2d2", -- color 2
+    background = "#1e1e1e",
+    foreground = "#d2d2d2",
 
-    yellow     = "#facd28", -- 4
-    blue       = "#6495ed", -- 5
-    green      = "#8bf59f", -- 6
-    cyan       = "#87cefa", -- 7
-    violet     = "#9092ff", -- 8
-    teal       = "#91b6c7", -- 9
-    khaki      = "#f0e68c", -- 10
-    orange     = "#ffa500", -- 11
-    gray       = "#949494", -- 12
-    magenta    = "#f0a0f0", -- 13
-    pink       = "#ffb4af", -- 14
-    red        = "#ff8282", -- 15
+    yellow     = "#facd28",
+    blue       = "#6495ed",
+    green      = "#60fbb3",
+    cyan       = "#87cefa",
+    violet     = "#ed87fa",
+    teal       = "#91b6c7",
+    khaki      = "#f0e68c",
+    orange     = "#ffa500",
+    gray       = "#949494",
+    magenta    = "#f0a0f0",
+    pink       = "#ffb4af",
+    red        = "#ff8282",
 
-    white      = "#ffffff", -- 17
+    white      = "#e7e7e7",
 }
 
 local function hi(group, opts)
@@ -105,29 +105,13 @@ hi("DiffChange",   { fg=c.yellow })
 hi("DiffDelete",   { fg=c.red })
 hi("DiffText",     { fg=c.blue })
 
--- Diagnostics (LSP)
-
-hi("DiagnosticError", { fg=c.red })
-hi("DiagnosticWarn",  { fg=c.orange })
-hi("DiagnosticInfo",  { fg=c.violet })
-hi("DiagnosticHint",  { fg=c.cyan })
-
--- Treesitter (important for modern Neovim)
-
-hi("@comment",  { link="Comment" })
-hi("@string",   { link="String" })
-hi("@number",   { link="Number" })
-hi("@function", { link="Function" })
-hi("@keyword",  { link="Keyword" })
-hi("@type",     { link="Type" })
-hi("@variable", { fg=c.khaki })
 
 -- GitSigns (optional)
 
 hi("GitSignsAdd",    { fg=c.green })
 hi("GitSignsChange", { fg=c.yellow })
 hi("GitSignsDelete", { fg=c.red })
--- Lualine theme derived from Midnight X palette
+
 
 local lualine_theme = {
     normal = {
