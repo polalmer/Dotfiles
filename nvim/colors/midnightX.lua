@@ -11,18 +11,17 @@ local c = {
     background = "#1e1e1e",
     foreground = "#d2d2d2",
 
-    yellow     = "#facd28",
-    blue       = "#6495ed",
-    green      = "#60fbb3",
+    yellow     = "#FAF728",
+    pink       = "#FA2894",
+    orange     = "#E87405",
+    blue       = "#6062FB",
+    green      = "#08BF5F",
     cyan       = "#87cefa",
-    violet     = "#ed87fa",
+    dark_green = "#046B22",
     teal       = "#91b6c7",
-    khaki      = "#f0e68c",
-    orange     = "#ffa500",
     gray       = "#949494",
     magenta    = "#f0a0f0",
-    pink       = "#ffb4af",
-    red        = "#ff8282",
+    red        = "#FF2E2E",
 
     white      = "#e7e7e7",
 }
@@ -37,7 +36,6 @@ hi("Normal",       { fg=c.foreground, bg=c.background })
 hi("CursorLine",   { bg=c.background })
 hi("CursorColumn", { bg=c.background })
 
-hi("Visual",       { bg=c.violet })
 hi("LineNr",       { fg=c.gray })
 hi("CursorLineNr", { fg=c.yellow })
 
@@ -48,7 +46,6 @@ hi("VertSplit",    { fg=c.background })
 hi("WinSeparator", { fg=c.background })
 
 hi("Pmenu",        { fg=c.foreground, bg=c.background })
-hi("PmenuSel",     { fg=c.background, bg=c.violet })
 
 hi("Search",       { fg=c.background, bg=c.yellow })
 hi("IncSearch",    { fg=c.background, bg=c.orange })
@@ -69,7 +66,7 @@ hi("Number",       { fg=c.orange })
 hi("Boolean",      { fg=c.orange })
 hi("Float",        { fg=c.orange })
 
-hi("Identifier",   { fg=c.khaki })
+hi("Identifier",   { fg=c.yellow })
 hi("Function",     { fg=c.green, bold=true })
 
 hi("Statement",    { fg=c.cyan })
@@ -84,10 +81,10 @@ hi("Include",      { fg=c.blue })
 hi("Define",       { fg=c.blue })
 hi("Macro",        { fg=c.blue })
 
-hi("Type",         { fg=c.violet })
-hi("StorageClass", { fg=c.violet })
-hi("Structure",    { fg=c.violet })
-hi("Typedef",      { fg=c.violet })
+hi("Type",         { fg=c.dark_green })
+hi("StorageClass", { fg=c.dark_green })
+hi("Structure",    { fg=c.dark_green })
+hi("Typedef",      { fg=c.dark_green })
 
 hi("Special",      { fg=c.pink })
 hi("SpecialChar",  { fg=c.pink })
@@ -97,20 +94,6 @@ hi("SpecialComment",{ fg=c.gray })
 
 hi("Error",        { fg=c.red, bold=true })
 hi("Todo",         { fg=c.yellow, bold=true })
-
--- Diff
-
-hi("DiffAdd",      { fg=c.green })
-hi("DiffChange",   { fg=c.yellow })
-hi("DiffDelete",   { fg=c.red })
-hi("DiffText",     { fg=c.blue })
-
-
--- GitSigns (optional)
-
-hi("GitSignsAdd",    { fg=c.green })
-hi("GitSignsChange", { fg=c.yellow })
-hi("GitSignsDelete", { fg=c.red })
 
 
 local lualine_theme = {
@@ -126,7 +109,7 @@ local lualine_theme = {
     },
 
     visual = {
-        a = { fg = c.background, bg = c.violet, gui = "bold" },
+        a = { fg = c.background, bg = c.dark_green, gui = "bold" },
         b = { fg = c.foreground, bg = c.background },
     },
 
