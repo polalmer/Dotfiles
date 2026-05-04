@@ -1,0 +1,92 @@
+# midnight_x palette synced with nvim/colors/midnightX.lua
+palette:
+  fg: &fg "#d2d2d2"
+  yellow: &yellow "#faf728"
+  pink: &pink "#fa2894"
+  purple: &purple "#f728fa"
+  green: &green "#08bf5f"
+  cyan: &cyan "#87cefa"
+  gray: &gray "#949494"
+  red: &red "#ff2e2e"
+
+filekinds:
+  normal: {foreground: *fg}
+  directory: {foreground: *pink}
+  symlink: {foreground: *purple}
+  pipe: {foreground: *yellow}
+  block_device: {foreground: *yellow}
+  char_device: {foreground: *yellow}
+  socket: {foreground: *pink}
+  special: {foreground: *pink}
+  executable: {foreground: *green}
+  mount_point: {foreground: *cyan}
+
+users:
+  user_you: {foreground: *pink}
+  user_root: {foreground: *red, is_bold: true}
+  user_other: {foreground: *fg}
+  group_yours: {foreground: *cyan}
+  group_other: {foreground: *gray}
+  group_root: {foreground: *red}
+
+perms:
+  user_read: {foreground: *yellow}
+  user_write: {foreground: *pink}
+  user_execute_file: {foreground: *green}
+  user_execute_other: {foreground: *green}
+  group_read: {foreground: *cyan}
+  group_write: {foreground: *purple}
+  group_execute: {foreground: *green}
+  other_read: {foreground: *gray}
+  other_write: {foreground: *gray}
+  other_execute: {foreground: *gray}
+  special_user_file: {foreground: *red}
+  special_other: {foreground: *red}
+  attribute: {foreground: *gray}
+
+size:
+  major: {foreground: *yellow}
+  minor: {foreground: *yellow}
+  number_byte: {foreground: *yellow}
+  number_kilo: {foreground: *yellow}
+  number_mega: {foreground: *yellow}
+  number_giga: {foreground: *yellow}
+  number_huge: {foreground: *yellow}
+  unit_byte: {foreground: *gray}
+  unit_kilo: {foreground: *gray}
+  unit_mega: {foreground: *gray}
+  unit_giga: {foreground: *gray}
+  unit_huge: {foreground: *gray}
+
+git:
+  new: {foreground: *green}
+  modified: {foreground: *yellow}
+  deleted: {foreground: *red}
+  renamed: {foreground: *purple}
+  ignored: {foreground: *gray}
+  conflicted: {foreground: *red, is_bold: true}
+
+git_repo:
+  branch_main: {foreground: *cyan, is_bold: true}
+  branch_other: {foreground: *purple}
+  git_clean: {foreground: *green}
+  git_dirty: {foreground: *yellow}
+
+file_type:
+  image: {foreground: *purple}
+  video: {foreground: *pink}
+  music: {foreground: *cyan}
+  crypto: {foreground: *green}
+  document: {foreground: *fg}
+  compressed: {foreground: *red}
+  temp: {foreground: *gray, is_dimmed: true}
+  compiled: {foreground: *yellow}
+  build: {foreground: *yellow, is_underline: true}
+  source: {foreground: *cyan}
+
+date: {foreground: *gray}
+header: {foreground: *yellow, is_bold: true}
+punctuation: {foreground: *gray}
+broken_symlink: {foreground: *red}
+broken_path_overlay: {foreground: *red}
+control_char: {foreground: *pink}
