@@ -1,5 +1,3 @@
--- Midnight X (MicroEmacs -> Neovim conversion)
-
 vim.cmd("highlight clear")
 if vim.fn.exists("syntax_on") then
     vim.cmd("syntax reset")
@@ -13,14 +11,10 @@ local c = {
 
     yellow     = "#FAF728",
     pink       = "#FA2894",
-    orange     = "#E87405",
-    blue       = "#6062FB",
+    purple     = "#F728FA",
     green      = "#08BF5F",
     cyan       = "#87cefa",
-    dark_green = "#046B22",
-    teal       = "#91b6c7",
     gray       = "#949494",
-    magenta    = "#f0a0f0",
     red        = "#FF2E2E",
 
     white      = "#e7e7e7",
@@ -48,7 +42,7 @@ hi("WinSeparator", { fg=c.background })
 hi("Pmenu",        { fg=c.foreground, bg=c.background })
 
 hi("Search",       { fg=c.background, bg=c.yellow })
-hi("IncSearch",    { fg=c.background, bg=c.orange })
+hi("IncSearch",    { fg=c.background, bg=c.purple })
 
 hi("Folded",       { fg=c.gray, bg=c.background })
 hi("FoldColumn",   { fg=c.gray })
@@ -59,32 +53,32 @@ hi("SignColumn",   { bg=c.background })
 
 hi("Comment",      { fg=c.gray, italic=true })
 
-hi("Constant",     { fg=c.orange })
-hi("String",       { fg=c.magenta })
-hi("Character",    { fg=c.magenta })
-hi("Number",       { fg=c.orange })
-hi("Boolean",      { fg=c.orange })
-hi("Float",        { fg=c.orange })
+hi("Constant",     { fg=c.purple })
+hi("String",       { fg=c.purple })
+hi("Character",    { fg=c.purple })
+hi("Number",       { fg=c.purple })
+hi("Boolean",      { fg=c.purple })
+hi("Float",        { fg=c.purple })
 
 hi("Identifier",   { fg=c.yellow })
-hi("Function",     { fg=c.green, bold=true })
+hi("Function",     { fg=c.pink, bold=true })
 
 hi("Statement",    { fg=c.cyan })
 hi("Conditional",  { fg=c.cyan })
 hi("Repeat",       { fg=c.cyan })
 hi("Label",        { fg=c.cyan })
-hi("Operator",     { fg=c.teal })
+hi("Operator",     { fg=c.cyan })
 hi("Keyword",      { fg=c.cyan })
 
-hi("PreProc",      { fg=c.blue })
-hi("Include",      { fg=c.blue })
-hi("Define",       { fg=c.blue })
-hi("Macro",        { fg=c.blue })
+hi("PreProc",      { fg=c.cyan })
+hi("Include",      { fg=c.cyan })
+hi("Define",       { fg=c.cyan })
+hi("Macro",        { fg=c.cyan })
 
-hi("Type",         { fg=c.dark_green })
-hi("StorageClass", { fg=c.dark_green })
-hi("Structure",    { fg=c.dark_green })
-hi("Typedef",      { fg=c.dark_green })
+hi("Type",         { fg=c.green })
+hi("StorageClass", { fg=c.green })
+hi("Structure",    { fg=c.green })
+hi("Typedef",      { fg=c.green })
 
 hi("Special",      { fg=c.pink })
 hi("SpecialChar",  { fg=c.pink })
@@ -98,7 +92,7 @@ hi("Todo",         { fg=c.yellow, bold=true })
 
 local lualine_theme = {
     normal = {
-        a = { fg = c.background, bg = c.blue, gui = "bold" },
+        a = { fg = c.background, bg = c.cyan, gui = "bold" },
         b = { fg = c.foreground, bg = c.background },
         c = { fg = c.foreground, bg = c.background },
     },
@@ -109,7 +103,7 @@ local lualine_theme = {
     },
 
     visual = {
-        a = { fg = c.background, bg = c.dark_green, gui = "bold" },
+        a = { fg = c.background, bg = c.pink, gui = "bold" },
         b = { fg = c.foreground, bg = c.background },
     },
 
@@ -119,7 +113,7 @@ local lualine_theme = {
     },
 
     command = {
-        a = { fg = c.background, bg = c.orange, gui = "bold" },
+        a = { fg = c.background, bg = c.purple, gui = "bold" },
         b = { fg = c.foreground, bg = c.background },
     },
 
@@ -131,4 +125,4 @@ local lualine_theme = {
 }
 
 -- Export so init.lua can use it
-_G.midnight_x_lualine_theme = lualine_theme
+midnight_x_lualine_theme = lualine_theme

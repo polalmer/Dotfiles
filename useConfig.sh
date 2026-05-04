@@ -68,6 +68,7 @@ echo "Linking dotfiles..."
 link_path "$DOTFILES_DIR/sway" "$CONFIG_TARGET/sway"
 link_path "$DOTFILES_DIR/nvim" "$CONFIG_TARGET/nvim"
 link_path "$DOTFILES_DIR/fish" "$CONFIG_TARGET/fish"
+link_path "$DOTFILES_DIR/eza" "$CONFIG_TARGET/eza"
 link_path "$DOTFILES_DIR/fonts" "$HOME/.fonts"
 link_path "$DOTFILES_DIR/alacritty" "$CONFIG_TARGET/alacritty"
 
