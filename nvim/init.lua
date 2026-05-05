@@ -26,9 +26,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.call('plug#begin')
     -- BottomInfobar
     Plug('nvim-lualine/lualine.nvim')
-    -- manage language servers
-    --Plug('nvim-treesitter/nvim-treesitter')
+    Plug('neovim/nvim-lspconfig')
 vim.call('plug#end')
+
+vim.lsp.enable('pyright')
 
 --lualine config
 vim.cmd.colorscheme("midnightX")
