@@ -2,10 +2,10 @@ from libqtile import bar, layout, widget
 from libqtile.config import Key, Group, Screen
 from libqtile.lazy import lazy
 
-from ./colors import Colors
-from ./keymap import Keymap
-from ./globals import mod, terminal, launcher
-from ./bar import topBar
+from colors import Colors
+from keymap import Keymap
+from globals import mod, terminal, launcher
+from bar import topBar
 
 keys = Keymap.keys
 
@@ -31,6 +31,7 @@ screens = [
     Screen(
         top=topBar
     ),
+    wallpaper=background.jpg
 ]
 
 # Basic settings

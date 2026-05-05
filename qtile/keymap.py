@@ -1,6 +1,6 @@
 from libqtile.lazy import lazy
 
-from ./globals import mod
+from globals import mod
 
 def Keymap:
     keys = [
