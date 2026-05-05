@@ -2,7 +2,7 @@ from libqtile import bar, widget
 from libqtile.lazy import lazy
 
 from colors import Colors
-from globals import font
+from globals import fontname
 
 
 battery-widget = widget.Battery(
@@ -12,18 +12,18 @@ battery-widget = widget.Battery(
     discharge_char='',
     format='{char}{percent:2.0%}',
     low_background=Colors.red
-    font=font
+    font=fontname
 ),
 
 cpu-widget=widget.CPU(
     background=Colors.green,
-    font=font,
+    font=fontname,
     format='CPU {load_percent}%'
 )
 
 groupbox-widget = widget.GroupBox(
     active=Colors.cyan,
-    font=font,
+    font=fontname,
 )
 
 capslock-widget=widget.CapsNumLockIndicator(
@@ -31,24 +31,24 @@ capslock-widget=widget.CapsNumLockIndicator(
 
 clock-widget=widget.Clock(
     background=Colors.background,
-    font=font,
+    font=fontname,
     format='%d/%m/%y %H:%M'
 )
 
 memory-widget=widget.Memory(
-    font=font
+    font=fontname,
     background=Colors.purple,
     format='RAM {MemPercent}%'
 )
 
 wlan-widget=widget.Wlan(
-    font=font,
+    font=fontname,
     background=Colors.green,
     format='{essid} {percent:2.0%}'
 )
 
 thermal-widget=widget.ThermalZone(
-    font=font,
+    font=fontname,
 )
 
 topBar = bar.Bar(
