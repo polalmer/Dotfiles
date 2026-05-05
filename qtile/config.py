@@ -1,11 +1,10 @@
-from libqtile import bar, layout, widget
+from libqtile import layout
 from libqtile.config import Key, Group, Screen
 from libqtile.lazy import lazy
 
-from colors import Colors
-from keymap import Keymap
-from globals import mod, terminal, launcher
 from bar import topBar
+from globals import mod
+from keymap import Keymap
 
 keys = Keymap.keys
 
@@ -29,9 +28,9 @@ layouts = [
 # Bar (similar to swaybar)
 screens = [
     Screen(
-        top=topBar
-    ),
-    wallpaper=background.jpg
+        top=topBar,
+        wallpaper='background.jpg'
+    )
 ]
 
 # Basic settings

@@ -1,69 +1,69 @@
-from libqtile import bar, widget
-from libqtile.lazy import lazy
+from libqtile import widget
+from libqtile.bar import Bar, STRETCH
 
 from colors import Colors
 from globals import fontname
 
 
-battery-widget = widget.Battery(
+battery_widget = widget.Battery(
     background=Colors.purple,
     charge_char='~',
     charging_background=Colors.yellow,
     discharge_char='',
     format='{char}{percent:2.0%}',
-    low_background=Colors.red
+    low_background=Colors.red,
     font=fontname
-),
+)
 
-cpu-widget=widget.CPU(
+cpu_widget=widget.CPU(
     background=Colors.green,
     font=fontname,
     format='CPU {load_percent}%'
 )
 
-groupbox-widget = widget.GroupBox(
+groupbox_widget = widget.GroupBox(
     active=Colors.cyan,
     font=fontname,
 )
 
-capslock-widget=widget.CapsNumLockIndicator(
+capslock_widget=widget.CapsNumLockIndicator(
 )
 
-clock-widget=widget.Clock(
+clock_widget=widget.Clock(
     background=Colors.background,
     font=fontname,
     format='%d/%m/%y %H:%M'
 )
 
-memory-widget=widget.Memory(
+memory_widget=widget.Memory(
     font=fontname,
     background=Colors.purple,
     format='RAM {MemPercent}%'
 )
 
-wlan-widget=widget.Wlan(
+wlan_widget=widget.Wlan(
     font=fontname,
     background=Colors.green,
     format='{essid} {percent:2.0%}'
 )
-
-thermal-widget=widget.ThermalZone(
+thermal_widget=widget.ThermalZone(
     font=fontname,
 )
 
-topBar = bar.Bar(
+
+topBar = Bar(
     [
-        capslock-widget,
-        groupbox-widget,
+        capslock_widget,
+        groupbox_widget,
         widget.Prompt(),
         widget.WindowName(),
-        widget.Spacer(bar.STRETCH),
-        cpu-widget,
-        thermal-widget,
-        memory-widget,
-        wlan-widget,
-        battery-widget,
-        clock-widget
+        widget.Spacer(STRETCH),
+        cpu_widget,
+        thermal_widget,
+        memory_widget,
+        wlan_widget,
+        battery_widget,
+        clock_widget
     ],
     24,
 )

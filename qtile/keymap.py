@@ -1,8 +1,9 @@
 from libqtile.lazy import lazy
+from libqtile.config import Key
 
-from globals import mod
+from globals import mod, terminal, launcher
 
-def Keymap:
+class Keymap:
     keys = [
         # Basics
         Key([mod], "Return", lazy.spawn(terminal)),

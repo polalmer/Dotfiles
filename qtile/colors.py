@@ -1,4 +1,4 @@
-def Colors:
+class Colors:
     background = "#1e1e1e"
     foreground = "#d2d2d2"
 
