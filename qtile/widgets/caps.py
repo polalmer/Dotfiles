@@ -22,7 +22,7 @@ class Caps(base.ThreadPoolText):
             indicators = dict(re.findall(r"(Caps|Num)\s+Lock:\s*(\w*)", raw))
             glyphs = []
             if indicators.get("Caps", "").lower() == "on":
-                glyphs.append("A")
+                glyphs.append("\udb82\ude9b")
             if indicators.get("Num", "").lower() == "on":
                 glyphs.append("N")
             return " ".join(glyphs)

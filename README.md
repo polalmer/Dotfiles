@@ -17,3 +17,4 @@ texteditor configs
 
 ## qtile
 tiling window manager x11 or wayland
+needs a nerdfont

@@ -1,14 +1,19 @@
 class Colors:
-    background="#001E19"
-    foreground="#d2d2d2"
+    black="#001E19"
+    white="#d2d2d2"
 
-    red="#EC0002"
-    green="#14734B"
-    cyan="#13ECAF"
+    green="#03f002"
+    petrol="#06f0a8"
     orange="#ed4901"
-    pink="#EF05CC"
-    purple="#4C1173"
-    yellow="FAF728"
+    blood_orange="#f13802"
+    dark_purple="#3e122d"
+    red="#e80000"
+    lime="#a7ed0e"
+    dark_green="#497522"
 
-    primary=green
-    secondary=orange
+    batteryW=petrol
+    cpuW=green
+    memoryW=dark_purple
+    networkW=orange
+    clockW=dark_green
+    exitW=blood_orange

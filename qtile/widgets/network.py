@@ -31,9 +31,9 @@ class Network(base.ThreadPoolText):
             if state != "connected" or not connection or connection == "--":
                 continue
             if dev_type == "wifi":
-                return f"WiFi: {connection}"
+                return f"\uf1eb: {connection}"
             if dev_type == "ethernet":
-                return f"Eth: {connection}"
+                return f"\udb80\ude00: {connection}"
             return f"{dev_type.capitalize()}: {connection}"
         return self.fallback_text
 
