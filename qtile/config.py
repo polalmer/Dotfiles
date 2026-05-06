@@ -10,7 +10,7 @@ keys = Keymap.keys
 
 
 # Workspaces (Groups)
-groups = [Group(str(i)) for i in range(1, 11)]
+groups = [Group(str(i)) for i in range(1, 9)]
 
 for group in groups:
     keys.extend([
