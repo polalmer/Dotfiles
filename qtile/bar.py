@@ -3,69 +3,66 @@ from libqtile.bar import Bar, STRETCH
 
 from colors import Colors
 from globals import fontname
+from widgets.caps import Caps
 
 
 battery_widget = widget.Battery(
-    background=Colors.primary,
     charge_char='~',
-    charging_background=Colors.orange,
+    charging_foreground=Colors.orange,
     discharge_char='',
-    format='{char}{percent:2.0%}',
-    low_background=Colors.red,
+    format='Battery: {percent:2.0%}',
+    low_foreground=Colors.red,
 )
 
 cpu_widget=widget.CPU(
-    background=Colors.primary,
+    foreground=Colors.cyan,
     font=fontname,
-    format='CPU {load_percent}%'
+    format='CPU: {load_percent}%'
 )
 
 groupbox_widget = widget.GroupBox(
-    background=Colors.background,
-    active=Colors.primary,
-    font=fontname,
-)
-
-capslock_widget=widget.CapsNumLockIndicator(
+    highlight_method="block",
+    hide_unused=True,
+    highlight_color=[Colors.secondary],
+    other_current_screen_border=None,
+    other_screen_border=None,
     font=fontname
 )
 
 clock_widget=widget.Clock(
-    background=Colors.secondary,
+    foreground=Colors.foreground,
     font=fontname,
     format='%d/%m/%y %H:%M'
 )
 
 memory_widget=widget.Memory(
     font=fontname,
-    background=Colors.primary,
-    format='RAM {MemPercent}%'
+    foreground=Colors.primary,
+    format='RAM: {MemPercent}%'
 )
 
-wlan_widget=widget.Wlan(
-    font=fontname,
-    background=Colors.secondary,
-    format='{essid} {percent:2.0%}'
-)
 thermal_widget=widget.ThermalZone(
     font=fontname,
-    background=Colors.secondary,
 )
 
 exit_widget=widget.QuickExit(
+    foreground=Colors.foreground,
+    default_text="⏻"
+)
+
+caps_widget=Caps(
     background=Colors.red,
     font=fontname,
 )
 
 topBar = Bar(
     widgets =[
-        capslock_widget,
+        caps_widget,
         groupbox_widget,
         widget.Spacer(STRETCH),
         cpu_widget,
         thermal_widget,
         memory_widget,
-        wlan_widget,
         battery_widget,
         clock_widget,
         widget.QuickExit(),

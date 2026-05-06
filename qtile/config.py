@@ -19,8 +19,8 @@ for group in groups:
 
 layouts = [
     layout.Bsp(
-        border_focus=Colors.primary,
-        border_normal=Colors.secondary
+        border_focus=Colors.secondary,
+        border_normal=Colors.primary
     ),
 ]
 
