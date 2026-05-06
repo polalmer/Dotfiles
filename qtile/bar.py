@@ -64,7 +64,8 @@ topBar = Bar(
         memory_widget,
         wlan_widget,
         battery_widget,
-        clock_widget
+        clock_widget,
+        widget.QuickExit(),
     ],
     size=30
 )

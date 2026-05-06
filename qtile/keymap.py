@@ -11,8 +11,8 @@ class Keymap:
         Key([mod, "shift"], "q", lazy.window.kill()),
 
         # Reload / exit
-        Key([mod, "ctrl"], "r", lazy.reload_config()),
-        Key([mod, "ctrl"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+        Key([mod, "control"], "r", lazy.reload_config()),
+        Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
 
 
         # Focus movement (vim + arrows)
