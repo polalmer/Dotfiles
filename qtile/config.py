@@ -6,6 +6,7 @@ from pathlib import Path
 from bar import topBar
 from globals import mod
 from keymap import Keymap
+from colors import Colors
 
 keys = Keymap.keys
 
@@ -17,7 +18,10 @@ for group in groups:
     ])
 
 layouts = [
-    layout.Bsp(),
+    layout.Bsp(
+        border_focus=Colors.primary,
+        border_normal=Colors.secondary
+    ),
 ]
 
 wallpaper_path = Path(__file__).resolve().parent / "background.jpg"

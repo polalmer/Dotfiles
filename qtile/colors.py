@@ -1,12 +1,13 @@
 class Colors:
-    background = "#1e1e1e"
-    foreground = "#d2d2d2"
+    background="#001E19"
+    
+    red="#EC0002"
+    green="#14734B"
+    cyan="#13ECAF"
+    orange="#ed4901"
+    pink="#EF05CC"
+    purple="##4C1173"
 
-    yellow     = "#FAF728"
-    pink       = "#FA2894"
-    purple     = "#F728FA"
-    green      = "#08BF5F"
-    cyan       = "#87cefa"
-    gray       = "#949494"
-    red        = "#FF2E2E"
-    white      = "#e7e7e7"
+    primary=green
+    primary_contrast=purple
+    secondary=orange

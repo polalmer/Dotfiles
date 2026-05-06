@@ -6,23 +6,23 @@ from globals import fontname
 
 
 battery_widget = widget.Battery(
-    background=Colors.purple,
+    background=Colors.primary,
     charge_char='~',
-    charging_background=Colors.yellow,
+    charging_background=Colors.orange,
     discharge_char='',
     format='{char}{percent:2.0%}',
     low_background=Colors.red,
-    font=fontname
 )
 
 cpu_widget=widget.CPU(
-    background=Colors.green,
+    background=Colors.primary,
     font=fontname,
     format='CPU {load_percent}%'
 )
 
 groupbox_widget = widget.GroupBox(
-    active=Colors.cyan,
+    background=Colors.background,
+    active=Colors.primary,
     font=fontname,
 )
 
@@ -31,33 +31,36 @@ capslock_widget=widget.CapsNumLockIndicator(
 )
 
 clock_widget=widget.Clock(
-    background=Colors.background,
+    background=Colors.secondary,
     font=fontname,
     format='%d/%m/%y %H:%M'
 )
 
 memory_widget=widget.Memory(
     font=fontname,
-    background=Colors.purple,
+    background=Colors.primary,
     format='RAM {MemPercent}%'
 )
 
 wlan_widget=widget.Wlan(
     font=fontname,
-    background=Colors.green,
+    background=Colors.secondary,
     format='{essid} {percent:2.0%}'
 )
 thermal_widget=widget.ThermalZone(
     font=fontname,
+    background=Colors.secondary,
 )
 
+exit_widget=widget.QuickExit(
+    background=Colors.red,
+    font=fontname,
+)
 
 topBar = Bar(
     widgets =[
         capslock_widget,
         groupbox_widget,
-        widget.Prompt(),
-        widget.WindowName(),
         widget.Spacer(STRETCH),
         cpu_widget,
         thermal_widget,
