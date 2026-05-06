@@ -4,6 +4,7 @@ from libqtile.bar import Bar, STRETCH
 from colors import Colors
 from globals import fontname
 from widgets.caps import Caps
+from widgets.network import Network
 
 
 battery_widget = widget.Battery(
@@ -55,6 +56,11 @@ caps_widget=Caps(
     font=fontname,
 )
 
+network_widget=Network(
+    foreground=Colors.foreground,
+    font=fontname,
+)
+
 topBar = Bar(
     widgets =[
         caps_widget,
@@ -64,6 +70,7 @@ topBar = Bar(
         thermal_widget,
         memory_widget,
         battery_widget,
+        network_widget,
         clock_widget,
         widget.QuickExit(),
     ],
