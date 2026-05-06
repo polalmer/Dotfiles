@@ -9,5 +9,4 @@ class Colors:
     cyan       = "#87cefa"
     gray       = "#949494"
     red        = "#FF2E2E"
-
     white      = "#e7e7e7"

@@ -27,6 +27,7 @@ groupbox_widget = widget.GroupBox(
 )
 
 capslock_widget=widget.CapsNumLockIndicator(
+    font=fontname
 )
 
 clock_widget=widget.Clock(
@@ -52,7 +53,7 @@ thermal_widget=widget.ThermalZone(
 
 
 topBar = Bar(
-    [
+    widgets =[
         capslock_widget,
         groupbox_widget,
         widget.Prompt(),
@@ -65,5 +66,5 @@ topBar = Bar(
         battery_widget,
         clock_widget
     ],
-    24,
+    size=30
 )

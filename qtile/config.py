@@ -1,6 +1,7 @@
 from libqtile import layout
 from libqtile.config import Key, Group, Screen
 from libqtile.lazy import lazy
+from pathlib import Path
 
 from bar import topBar
 from globals import mod
@@ -19,10 +20,13 @@ layouts = [
     layout.Bsp(),
 ]
 
+wallpaper_path = Path(__file__).resolve().parent / "background.jpg"
+
 screens = [
     Screen(
         top=topBar,
-        wallpaper='background.jpg'
+        wallpaper=str(wallpaper_path),
+        wallpaper_mode="fill",
     )
 ]
 
