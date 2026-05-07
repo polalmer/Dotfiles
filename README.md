@@ -4,10 +4,9 @@ Install listed apps +
 - eza
 - alacritty terminal
 - rofi window switcher
+- python3, mypy
 
 Run `./useConfig.sh` to symlink the repo folders to your home/config paths.
-
-Fonts are also linked system-wide under `/usr/local/share/fonts/dotfiles` (via `sudo`) so they are available for all users, including `root`.
 
 ## Fish
 Shell configs (colors, abbreviations)
