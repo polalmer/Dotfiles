@@ -3,7 +3,7 @@ set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 CONFIG_TARGET="${XDG_CONFIG_HOME:-$HOME/.config}"
-SYSTEM_FONT_TARGET="/usr/local/share/fonts"
+SYSTEM_FONT_TARGET="/usr/share/fonts/TTF"
 USER_FONT_TARGET="${XDG_DATA_HOME:-$HOME/.local/share}/fonts"
 
 mkdir -p "$CONFIG_TARGET"

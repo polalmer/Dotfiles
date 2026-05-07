@@ -4,7 +4,7 @@ import subprocess
 from libqtile.widget import base
 
 
-class Caps(base.ThreadPoolText):
+class Caps(base.InLoopPollText):
     """Show lock-state indicators for Caps Lock and Num Lock."""
 
     defaults = [

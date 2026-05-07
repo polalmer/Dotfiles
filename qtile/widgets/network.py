@@ -4,7 +4,7 @@ import shlex
 from libqtile.widget import base
 
 
-class Network(base.ThreadPoolText):
+class Network(base.InLoopPollText):
     """Show current NetworkManager status."""
 
     defaults = [
