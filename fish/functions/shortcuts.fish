@@ -11,3 +11,4 @@ alias ls='eza --color=always --group-directories-first --icons=always' # preferr
 alias ll='eza -la --color=always --group-directories-first --icons=always'  # long format
 alias la='eza -a --color=always --group-directories-first --icons=always'
 alias ..='cd ..'
+alias check-qtile='python3 ~/.config/qtile/config.py && qtile cmd-obj -o cmd -f validate_config'
