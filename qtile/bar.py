@@ -12,9 +12,9 @@ _fontsize = 14
 
 def leftEnd(leftColor, rightColor) -> widget.TextBox:
     return widget.TextBox(
-        text='\uE0B2',
+        text='\ue0be',
         padding=0,
-        fontsize=_barSize,
+        fontsize=_barSize+2,
         background=leftColor,
         foreground=rightColor
     )
