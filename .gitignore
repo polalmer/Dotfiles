@@ -1,4 +1,4 @@
 /.idea/*
 .venv
-qtile/__pycache__
+**/__pycache__
 fish/fish_variables
