@@ -39,9 +39,12 @@ cpu_widget=widget.CPU(
 )
 
 groupbox_widget = widget.GroupBox(
-    highlight_method="block",
-    hide_unused=True,
-    highlight_color=[Colors.orange],
+    highlight_method="text",
+    hide_unused=False,
+    active="#6b6b6b",
+    inactive="#6b6b6b",
+    this_current_screen_border=Colors.orange,
+    this_screen_border="#6b6b6b",
     other_current_screen_border=None,
     other_screen_border=None,
     font=fontname,
