@@ -53,3 +53,11 @@ white = "#fce8c3"
 bindings = [
    { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
 ]
+
+[window]
+opacity=0.8
+padding={x=5,y=0}
+
+[mouse]
+hide_when_typing=true
+
