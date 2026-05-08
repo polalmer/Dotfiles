@@ -13,7 +13,7 @@ class Colors:
 
     batteryW=petrol
     cpuW=green
-    memoryW=dark_purple
+    memoryW=blood_orange
     networkW=orange
-    clockW=dark_green
-    exitW=blood_orange
+    clockW=white
+    exitW=dark_purple

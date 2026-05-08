@@ -20,8 +20,8 @@ for group in groups:
 layouts = [
     layout.Bsp(
         border_focus=Colors.orange,
-        border_normal=Colors.dark_green,
-        border_on_single=True
+        border_on_single=True,
+        margin=5
     ),
 ]
 
