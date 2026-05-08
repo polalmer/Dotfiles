@@ -1,5 +1,5 @@
 class Colors:
-    black="#001E19"
+    black="#171717"
     white="#d2d2d2"
 
     green="#03f002"

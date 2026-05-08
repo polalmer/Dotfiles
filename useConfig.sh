@@ -33,6 +33,7 @@ link_path "$DOTFILES_DIR/nvim" "$CONFIG_TARGET/nvim"
 link_path "$DOTFILES_DIR/fish" "$CONFIG_TARGET/fish"
 link_path "$DOTFILES_DIR/eza" "$CONFIG_TARGET/eza"
 link_path "$DOTFILES_DIR/alacritty" "$CONFIG_TARGET/alacritty"
+link_path "$DOTFILES_DIR/rofi" "$CONFIG_TARGET/rofi"
 
 echo "Installing font..."
 FONT_SOURCE_DIR="$DOTFILES_DIR/fonts"
