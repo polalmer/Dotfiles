@@ -3,8 +3,7 @@ from libqtile.bar import Bar, STRETCH
 
 from colors import Colors
 from globals import fontname
-from widgets.caps import Caps
-from widgets.network import Network
+from widgets import Network, Caps, Shutdown
 
 _barSize = 30
 _padding = 5
@@ -57,7 +56,7 @@ memory_widget=widget.Memory(
     fontsize=_fontsize
 )
 
-exit_widget=widget.QuickExit(
+exit_widget=Shutdown(
     default_text="\uf011",
     background=Colors.exitW,
     padding=_padding,

@@ -1,6 +1,6 @@
 import subprocess
-import shlex
 
+from libqtile.lazy import lazy
 from libqtile.widget import base
 
 
@@ -14,8 +14,7 @@ class Network(base.InLoopPollText):
             ["nmcli", "-t", "-f", "TYPE,STATE,CONNECTION", "device"],
             "Command used to get network status.",
         ),
-        ("fallback_text", "Offline", "Text shown when no active connection exists."),
-        ("applet_cmd", "nm-applet", "Command run when the widget is left-clicked."),
+        ("fallback_text", "Offline", "Text shown when no active connection exists.")
     ]
 
     def __init__(self, **config):
@@ -48,7 +47,4 @@ class Network(base.InLoopPollText):
         super().button_press(x, y, button)
         if button != 1:
             return
-        try:
-            subprocess.Popen(shlex.split(self.applet_cmd))
-        except (FileNotFoundError, PermissionError):
-            return
+        lazy.spawn('nm-applet')
