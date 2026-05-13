@@ -1,27 +1,26 @@
 import subprocess
 
+from libqtile.command.base import expose_command
 from libqtile.lazy import lazy
 from libqtile.widget import base
 
 
-class Network(base.InLoopPollText):
-    """Show current NetworkManager status."""
+class Network(base.ThreadPoolText):
 
     defaults = [
         ("update_interval", 2, "Update interval in seconds."),
-        (
-            "cmd",
-            ["nmcli", "-t", "-f", "TYPE,STATE,CONNECTION", "device"],
-            "Command used to get network status.",
-        ),
-        ("fallback_text", "Offline", "Text shown when no active connection exists.")
     ]
 
     def __init__(self, **config):
         super().__init__("", **config)
         self.add_defaults(Network.defaults)
+        self.add_callbacks({"Button1": self.trigger})
 
-    def _parse(self, raw: str) -> str:
+    def getNetworkMangerStatus(self) -> str:
+
+        nm_command = ["nmcli", "-t", "-f", "TYPE,STATE,CONNECTION", "device"]
+        raw = subprocess.check_output(nm_command, text=True)
+
         for line in raw.splitlines():
             parts = line.strip().split(":", 2)
             if len(parts) != 3:
@@ -36,15 +35,10 @@ class Network(base.InLoopPollText):
             return f"{dev_type.capitalize()}: {connection}"
         return self.fallback_text
 
-    def poll(self):
-        try:
-            raw = subprocess.check_output(self.cmd, text=True)
-        except (subprocess.CalledProcessError, FileNotFoundError):
-            return self.fallback_text
-        return self._parse(raw)
+    #override the existing poll method
+    def poll(self) -> str:
+        return self.getNetworkMangerStatus()
 
-    def button_press(self, x, y, button):
-        super().button_press(x, y, button)
-        if button != 1:
-            return
+    @expose_command()
+    def trigger(self):
         lazy.spawn('nm-applet')

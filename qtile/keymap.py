@@ -1,13 +1,15 @@
 from libqtile.lazy import lazy
 from libqtile.config import Key
 
-from globals import mod, terminal, launcher
+from globals import Globals
+
+mod = Globals.mod
 
 class Keymap:
     keys = [
         # Basics
-        Key([mod], "Return", lazy.spawn(terminal)),
-        Key([mod], "d", lazy.spawn(launcher)),
+        Key([mod], "Return", lazy.spawn(Globals.terminal)),
+        Key([mod], "d", lazy.spawn(Globals.launcher)),
         Key([mod, "shift"], "q", lazy.window.kill()),
 
         # Reload / exit
@@ -52,8 +54,5 @@ class Keymap:
         # Brightness
         Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
         Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set 5%+")),
-
-        # Screenshot
-        Key([], "Print", lazy.spawn("grim")),
     ]
 

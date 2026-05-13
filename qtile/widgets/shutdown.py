@@ -6,14 +6,12 @@ from libqtile.widget import base
 
 class Shutdown(base._TextBox):
 
-    defaults = [
-        ("poweroff", ["sudo poweroff"], "turn off the system"),
-    ]
-
     def __init__(self, **config):
         super().__init__("", **config)
         self.add_defaults(Shutdown.defaults)
+        self.add_callbacks({"Button1": self.trigger})
+
 
     @expose_command()
     def trigger(self):
-        subprocess.run(self.poweroff)       
+        subprocess.run(["sudo poweroff"])

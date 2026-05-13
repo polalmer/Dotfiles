@@ -1,4 +1,5 @@
-mod = "mod4"
-terminal = "alacritty"
-launcher = "rofi -show run"
-fontname = "FixedsysExcelsior Nerd Font"
+class Globals:
+    mod = "mod4"
+    terminal = "alacritty"
+    launcher = "rofi -show run"
+    fontname = "FixedsysExcelsior Nerd Font"

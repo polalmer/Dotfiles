@@ -2,7 +2,7 @@ from libqtile import widget
 from libqtile.bar import Bar, STRETCH
 
 from colors import Colors
-from globals import fontname
+from globals import Globals
 from widgets import Network, Caps, Shutdown
 
 _barSize = 30
@@ -19,7 +19,7 @@ battery_widget = widget.Battery(
 )
 
 cpu_widget=widget.CPU(
-    font=fontname,
+    font=Globals.fontname,
     foreground=Colors.cpuW,
     format='\uf4bc: {load_percent}%',
     padding=_padding,
@@ -35,13 +35,13 @@ groupbox_widget = widget.GroupBox(
     this_screen_border="#6b6b6b",
     other_current_screen_border=None,
     other_screen_border=None,
-    font=fontname,
+    font=Globals.fontname,
     padding=_padding,
     fontsize=_fontsize
 )
 
 clock_widget=widget.Clock(
-    font=fontname,
+    font=Globals.fontname,
     format='%d/%m/%y %H:%M',
     foreground=Colors.clockW,
     padding=_padding,
@@ -49,7 +49,7 @@ clock_widget=widget.Clock(
 )
 
 memory_widget=widget.Memory(
-    font=fontname,
+    font=Globals.fontname,
     foreground=Colors.memoryW,
     format='\uefc5: {MemPercent}%',
     padding=_padding,
@@ -65,13 +65,13 @@ exit_widget=Shutdown(
 
 caps_widget=Caps(
     background=Colors.red,
-    font=fontname,
+    font=Globals.fontname,
     padding=_padding,
     fontsize=_fontsize
 )
 
 network_widget=Network(
-    font=fontname,
+    font=Globals.fontname,
     foreground=Colors.black,
     padding=_padding,
     fontsize=_fontsize

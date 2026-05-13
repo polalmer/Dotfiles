@@ -4,7 +4,7 @@ from libqtile.lazy import lazy
 from pathlib import Path
 
 from bar import topBar
-from globals import mod
+from globals import Globals
 from keymap import Keymap
 from colors import Colors
 
@@ -13,8 +13,8 @@ keys = Keymap.keys
 groups = [Group(str(i)) for i in range(1, 10)]
 for group in groups:
     keys.extend([
-        Key([mod], group.name, lazy.group[group.name].toscreen()),
-        Key([mod, "shift"], group.name, lazy.window.togroup(group.name)),
+        Key([Globals.mod], group.name, lazy.group[group.name].toscreen()),
+        Key([Globals.mod, "shift"], group.name, lazy.window.togroup(group.name)),
     ])
 
 layouts = [
