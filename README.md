@@ -4,10 +4,8 @@ Install listed apps
 - eza
 - alacritty
 - rofi
-- sway
-- quickshell 
-    - blueZ
-    - dbus
+- qtile
+    - 
 - networkmanager
 - pipewire
     - piperwire pulse
