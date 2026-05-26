@@ -33,7 +33,6 @@ vim.call('plug#begin')
 vim.call('plug#end')
 
 vim.lsp.enable('pyright')
-vim.lsp.enable('qmlls')
 
 --lualine config
 vim.cmd.colorscheme("midnightX")

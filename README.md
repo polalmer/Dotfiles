@@ -5,7 +5,8 @@ Install listed apps
 - alacritty
 - rofi
 - qtile
-    - 
+    - psutil
+    - pulsectl_asyncio
 - networkmanager
 - pipewire
     - piperwire pulse
