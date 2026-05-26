@@ -12,6 +12,9 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 
+-- random shortcuts
+vim.keymap.set("n", "<C-e>", vim.diagnostic.open_float)
+
 -- Copy yanks to system clipboard, but keep delete/change local.
 vim.api.nvim_create_autocmd("TextYankPost", {
     callback = function()
@@ -30,6 +33,7 @@ vim.call('plug#begin')
 vim.call('plug#end')
 
 vim.lsp.enable('pyright')
+vim.lsp.enable('qmlls')
 
 --lualine config
 vim.cmd.colorscheme("midnightX")

@@ -4,9 +4,9 @@
     margin: 0px;
     padding: 0px;
     spacing: 0px;
-    border-normal: #171717;
-    border-selected: #f13802; 
-    text-color: #f13802;
+    border-normal: #1e1e1e;
+    border-selected: #faf728; 
+    text-color: #f728fa;
 }
 
 window {

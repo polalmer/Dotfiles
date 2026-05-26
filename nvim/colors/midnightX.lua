@@ -92,18 +92,18 @@ hi("Todo",         { fg=c.yellow, bold=true })
 
 local lualine_theme = {
     normal = {
-        a = { fg = c.background, bg = c.cyan, gui = "bold" },
+        a = { fg = c.background, bg = c.purple, gui = "bold" },
         b = { fg = c.foreground, bg = c.background },
         c = { fg = c.foreground, bg = c.background },
     },
 
     insert = {
-        a = { fg = c.background, bg = c.green, gui = "bold" },
+        a = { fg = c.background, bg = c.yellow, gui = "bold" },
         b = { fg = c.foreground, bg = c.background },
     },
 
     visual = {
-        a = { fg = c.background, bg = c.pink, gui = "bold" },
+        a = { fg = c.background, bg = c.cyan, gui = "bold" },
         b = { fg = c.foreground, bg = c.background },
     },
 
@@ -113,7 +113,7 @@ local lualine_theme = {
     },
 
     command = {
-        a = { fg = c.background, bg = c.purple, gui = "bold" },
+        a = { fg = c.background, bg = c.green, gui = "bold" },
         b = { fg = c.foreground, bg = c.background },
     },
 

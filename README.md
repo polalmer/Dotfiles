@@ -4,11 +4,11 @@ Install listed apps
 - eza
 - alacritty
 - rofi
-- python
-    - psutil
-    - pulsectl_asyncio
+- sway
+- quickshell 
+    - blueZ
+    - dbus
 - networkmanager
-    - nm-applet
 - pipewire
     - piperwire pulse
 
