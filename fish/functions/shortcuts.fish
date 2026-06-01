@@ -11,4 +11,4 @@ alias ls='eza --color=always --group-directories-first --icons=always' # preferr
 alias ll='eza -la --color=always --group-directories-first --icons=always'  # long format
 alias la='eza -a --color=always --group-directories-first --icons=always'
 alias ..='cd ..'
-alias voidfetch='fastfetch --logo void2'
+alias vim='nvim'
