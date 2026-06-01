@@ -1,5 +1,4 @@
 local vim = vim
-local Plug = vim.fn['plug#']
 
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
@@ -25,13 +24,12 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     end,
 })
 
---Plug Area
-vim.call('plug#begin')
-    -- BottomInfobar
-    Plug('nvim-lualine/lualine.nvim')
-    Plug('neovim/nvim-lspconfig')
-vim.call('plug#end')
-
+--Plugins
+vim.pack.add({
+    'https://github.com/nvim-tree/nvim-web-devicons',
+    'https://github.com/nvim-lualine/lualine.nvim',
+    'https://github.com/neovim/nvim-lspconfig'
+})
 
 vim.lsp.enable('pyright')
 
