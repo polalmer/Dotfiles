@@ -30,7 +30,10 @@ vim.call('plug#begin')
     -- BottomInfobar
     Plug('nvim-lualine/lualine.nvim')
     Plug('neovim/nvim-lspconfig')
+    Plug('norcalli/nvim-colorizer.lua')
 vim.call('plug#end')
+
+require('colorizer').setup()
 
 vim.lsp.enable('pyright')
 

@@ -11,7 +11,7 @@
 
 window {
     location: north;
-    y-offset: calc(50% - 176px);
+    y-offset: 45%; 
     width: 480;
     background-color: @bg;
 }
