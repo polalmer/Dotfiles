@@ -12,3 +12,10 @@ alias ll='eza -la --color=always --group-directories-first --icons=always'  # lo
 alias la='eza -a --color=always --group-directories-first --icons=always'
 alias ..='cd ..'
 alias vim='nvim'
+
+#portage aliases
+alias emerge-install='emerge --quiet --ask'
+alias emerge-prebuild='emerge --quiet --ask --getbinpkg'
+alias emerge-remove='emerge --deselect --depclean'
+alias emerge-search='emerge --searchdesc'
+alias emerge-update='emerge --update --deep @world' 
