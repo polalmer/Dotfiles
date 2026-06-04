@@ -1,5 +1,7 @@
 # Dotfiles
 Install listed apps
+- neovim
+    - treesitter-cli
 - fish
 - eza
 - alacritty
