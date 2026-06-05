@@ -14,16 +14,6 @@ vim.opt.softtabstop = 4
 -- random shortcuts
 vim.keymap.set("n", "<C-e>", vim.diagnostic.open_float)
 
--- Copy yanks to system clipboard, but keep delete/change local.
-vim.api.nvim_create_autocmd("TextYankPost", {
-    callback = function()
-        local e = vim.v.event
-        if e.operator == "y" and e.regname == "" then
-            vim.fn.setreg("+", e.regcontents, e.regtype)
-        end
-    end,
-})
-
 --Plugins
 vim.pack.add({
     'https://github.com/nvim-tree/nvim-web-devicons',
