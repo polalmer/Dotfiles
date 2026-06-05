@@ -3,7 +3,7 @@ from libqtile.config import Key, Group, Screen
 from libqtile.lazy import lazy
 from pathlib import Path
 
-from bar import topBar
+import bar
 from globals import Globals
 from keymap import Keymap
 from colors import Colors
@@ -29,7 +29,7 @@ wallpaper_path = Path(__file__).resolve().parent / "background.jpg"
 
 screens = [
     Screen(
-        top=topBar,
+        top=bar.LaptopBar(),
         wallpaper=str(wallpaper_path),
         wallpaper_mode="fill",
     )
