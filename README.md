@@ -5,10 +5,8 @@ Install listed apps
 - fish
 - eza
 - alacritty
-- rofi
-- qtile
-    - psutil
-    - pulsectl_asyncio
+- sway
+- noctalia >= v5
 - networkmanager
 - pipewire
     - piperwire pulse

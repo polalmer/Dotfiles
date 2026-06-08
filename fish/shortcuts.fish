@@ -16,6 +16,6 @@ alias vim='nvim'
 #portage aliases
 alias emerge-install='emerge --quiet --ask'
 alias emerge-prebuild='emerge --quiet --ask --getbinpkg'
-alias emerge-remove='emerge --deselect --depclean'
+alias emerge-remove='emerge --deselect --depclean --ask'
 alias emerge-search='emerge --searchdesc'
-alias emerge-update='emerge --update --deep @world' 
+alias emerge-update='emerge --ask --update --deep @world' 
