@@ -3,11 +3,11 @@ set $mod Mod4
 set $term alacritty
 set $ipc noctalia msg
 
+#main PC
+output DP-1 mode 1920x1080@165Hz
+
 #auto start noctalia
 exec noctalia
-
-# Output / wallpaper
-output * bg ~/Dotfiles/sway/background.jpg fill
 
 # Input
 focus_follows_mouse yes
@@ -19,8 +19,7 @@ default_border pixel 2
 client.focused #ed4901 #ed4901 #d2d2d2 #ed4901   #ed4901
 
 # Auto BSP-style tiling
-for_window [app_id=".*"] split toggle
-for_window [class=".*"]  split toggle
+exec_always autotiling
 
 # --- Keybindings ---
 

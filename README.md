@@ -6,6 +6,7 @@ Install listed apps
 - eza
 - alacritty
 - sway
+    - autotiling
 - noctalia >= v5
 - networkmanager
 - pipewire
