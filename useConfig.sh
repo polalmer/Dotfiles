@@ -7,7 +7,7 @@ CONFIG_TARGET="${XDG_CONFIG_HOME:-$HOME/.config}"
 . ./scripts/linkPath.sh
 echo "Linking dotfiles..."
 mkdir -p "$CONFIG_TARGET"
-linkPath "$DOTFILES_DIR/sway" "$CONFIG_TARGET/sway"
+linkPath "$DOTFILES_DIR/mango" "$CONFIG_TARGET/mango"
 linkPath "$DOTFILES_DIR/nvim" "$CONFIG_TARGET/nvim"
 linkPath "$DOTFILES_DIR/fish" "$CONFIG_TARGET/fish"
 linkPath "$DOTFILES_DIR/eza" "$CONFIG_TARGET/eza"

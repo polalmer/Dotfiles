@@ -18,15 +18,8 @@ vim.keymap.set("n", "<C-e>", vim.diagnostic.open_float)
 vim.pack.add({
     'https://github.com/nvim-tree/nvim-web-devicons',
     'https://github.com/nvim-lualine/lualine.nvim',
-    'https://github.com/neovim/nvim-lspconfig',
-     {
-		src = "https://github.com/nvim-treesitter/nvim-treesitter",
-		version = "main",
-	 },
 })
 
---enable diffrent lsp's
-vim.lsp.enable('pyright')
 
 --lualine config
 vim.cmd.colorscheme("midnightX")
@@ -37,27 +30,3 @@ require("lualine").setup({
         component_separators = "",
     }
 })
-
---treesitter config
-require("nvim-treesitter").setup({})
-require('nvim-treesitter').install 
-{ 
-    'python',
-    'lua',
-    'json',
-    'toml'
-}
-
---autostart treesitter per file type
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "*",
-	callback = function()
-		local filetype = vim.bo.filetype
-		if filetype and filetype ~= "" then
-			pcall(vim.treesitter.start)
-		end
-	end,
-})
-vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.bo.indentexpr = "v:lua.vim.treesitter.indentexpr()"
-
