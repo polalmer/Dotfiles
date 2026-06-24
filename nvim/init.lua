@@ -71,6 +71,8 @@ cmp.setup.cmdline({ '/', '?' }, {
 
 vim.lsp.config['zls'] = {
     cmd = {'zls'},
-    filetypes = {'zig'}
+    filetypes = {'zig'},
+    root_markers = {'.git'},
+    settings = { Lua = { diagnostics = { globals = { "vim" } } } }
 }
 vim.lsp.enable('zls')
