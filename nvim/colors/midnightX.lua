@@ -13,8 +13,10 @@ local c = {
     pink       = "#FA2894",
     purple     = "#F728FA",
     green      = "#08BF5F",
-    cyan       = "#87cefa",
+    blue       = "#3398FF",
+    cyan       = "#3C9BDF",
     gray       = "#949494",
+    orange     = "#BA5C23",
     red        = "#FF2E2E",
 
     white      = "#e7e7e7",
@@ -68,12 +70,12 @@ hi("Conditional",  { fg=c.cyan })
 hi("Repeat",       { fg=c.cyan })
 hi("Label",        { fg=c.cyan })
 hi("Operator",     { fg=c.cyan })
-hi("Keyword",      { fg=c.cyan })
 
-hi("PreProc",      { fg=c.cyan })
-hi("Include",      { fg=c.cyan })
+hi("Keyword",      { fg=c.blue })
+hi("PreProc",      { fg=c.blue })
+hi("Include",      { fg=c.blue })
 hi("Define",       { fg=c.cyan })
-hi("Macro",        { fg=c.cyan })
+hi("Macro",        { fg=c.blue })
 
 hi("Type",         { fg=c.green })
 hi("StorageClass", { fg=c.green })
