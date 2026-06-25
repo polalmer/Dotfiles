@@ -19,7 +19,7 @@ style = "Regular"
 
 [colors.primary]
 foreground = "#fce8c3"
-background = "#1c1b19"
+background = "#211222"
 
 [colors.cursor]
 text = "#1c1b19"

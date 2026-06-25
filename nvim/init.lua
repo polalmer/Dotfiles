@@ -27,14 +27,13 @@ vim.pack.add({
     'https://github.com/hrsh7th/nvim-cmp',
     'https://github.com/hrsh7th/cmp-vsnip',
     'https://github.com/hrsh7th/vim-vsnip',
-    --gruvbox theme
-    'https://github.com/ellisonleao/gruvbox.nvim'
+    --theme
+    'https://github.com/savq/melange-nvim'
 })
 
 
-require("gruvbox").setup()
 --use custom midnightX (needs more work)
-vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("melange")
 
 require("lualine").setup({
     options = {
