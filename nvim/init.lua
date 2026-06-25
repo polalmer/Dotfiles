@@ -16,25 +16,30 @@ vim.keymap.set("n", "<C-e>", vim.diagnostic.open_float)
 
 --Plugins
 vim.pack.add({
+    --lualine
     'https://github.com/nvim-tree/nvim-web-devicons',
     'https://github.com/nvim-lualine/lualine.nvim',
+    --completions
     'https://github.com/hrsh7th/cmp-nvim-lsp',
     'https://github.com/hrsh7th/cmp-buffer',
     'https://github.com/hrsh7th/cmp-path',
     'https://github.com/hrsh7th/cmp-cmdline',
     'https://github.com/hrsh7th/nvim-cmp',
     'https://github.com/hrsh7th/cmp-vsnip',
-    'https://github.com/hrsh7th/vim-vsnip' 
+    'https://github.com/hrsh7th/vim-vsnip',
+    --gruvbox theme
+    'https://github.com/ellisonleao/gruvbox.nvim'
 })
 
 
---lualine config
-vim.cmd.colorscheme("midnightX")
+require("gruvbox").setup()
+--use custom midnightX (needs more work)
+vim.cmd.colorscheme("gruvbox")
+
 require("lualine").setup({
     options = {
-        theme = midnight_x_lualine_theme,
         section_separators = "",
-        component_separators = "",
+        component_separators = ""
     }
 })
 
