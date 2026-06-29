@@ -17,10 +17,6 @@ style = "Italic"
 family = "FixedsysExcelsior Nerd Font"
 style = "Regular"
 
-[colors.primary]
-foreground = "#fce8c3"
-background = "#211222"
-
 [colors.cursor]
 text = "#1c1b19"
 cursor = "#87cefa"
@@ -29,25 +25,29 @@ cursor = "#87cefa"
 text = "#1c1b19"
 background = "#fce8c3"
 
+[colors.primary]
+foreground = "#ECE1D7"
+background = "#292522"
+
 [colors.normal]
-black = "#1c1b19"
-red = "#ef2f27"
-green = "#519f50"
-yellow = "#fbb829"
-blue = "#2c78bf"
-magenta = "#e02c6d"
-cyan = "#0aaeb3"
-white = "#baa67f"
+black      = "#34302C"
+red        = "#BD8183"
+green      = "#78997A"
+yellow     = "#E49B5D"
+blue       = "#7F91B2"
+magenta    = "#B380B0"
+cyan       = "#7B9695"
+white      = "#C1A78E"
 
 [colors.bright]
-black = "#918175"
-red = "#f75341"
-green = "#98bc37"
-yellow = "#fed06e"
-blue = "#68a8e4"
-magenta = "#ff5c8f"
-cyan = "#2be4d0"
-white = "#fce8c3"
+black      = "#867462"
+red        = "#D47766"
+green      = "#85B695"
+yellow     = "#EBC06D"
+blue       = "#A3A9CE"
+magenta    = "#CF9BC2"
+cyan       = "#89B3B6"
+white      = "#ECE1D7"
 
 [keyboard]
 bindings = [

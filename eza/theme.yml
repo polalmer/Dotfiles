@@ -1,48 +1,55 @@
-# midnight_x palette synced with nvim/colors/midnightX.lua
+# Melange like palette
 palette:
-  fg: &fg "#d2d2d2"
-  yellow: &yellow "#faf728"
-  pink: &pink "#fa2894"
-  purple: &purple "#f728fa"
-  green: &green "#08bf5f"
-  cyan: &cyan "#87cefa"
-  gray: &gray "#949494"
-  red: &red "#ff2e2e"
+  fg: &fg "#ECE1D7"
+  dim: &dim "#867462"
+  red: &red "#BD8183"
+  red_bright: &red_bright "#D47766"
+  green: &green "#78997A"
+  green_bright: &green_bright "#85B695"
+  yellow: &yellow "#E49B5D"
+  yellow_bright: &yellow_bright "#EBC06D"
+  blue: &blue "#7F91B2"
+  blue_bright: &blue_bright "#A3A9CE"
+  magenta: &magenta "#B380B0"
+  magenta_bright: &magenta_bright "#CF9BC2"
+  cyan: &cyan "#7B9695"
+  cyan_bright: &cyan_bright "#89B3B6"
+  tan: &tan "#C1A78E"
 
 filekinds:
   normal: {foreground: *fg}
-  directory: {foreground: *pink}
-  symlink: {foreground: *purple}
+  directory: {foreground: *blue_bright}
+  symlink: {foreground: *cyan_bright}
   pipe: {foreground: *yellow}
   block_device: {foreground: *yellow}
   char_device: {foreground: *yellow}
-  socket: {foreground: *pink}
-  special: {foreground: *pink}
-  executable: {foreground: *green}
+  socket: {foreground: *magenta}
+  special: {foreground: *magenta}
+  executable: {foreground: *green_bright}
   mount_point: {foreground: *cyan}
 
 users:
-  user_you: {foreground: *pink}
-  user_root: {foreground: *red, is_bold: true}
+  user_you: {foreground: *yellow_bright}
+  user_root: {foreground: *red_bright, is_bold: true}
   user_other: {foreground: *fg}
-  group_yours: {foreground: *cyan}
-  group_other: {foreground: *gray}
-  group_root: {foreground: *red}
+  group_yours: {foreground: *cyan_bright}
+  group_other: {foreground: *dim}
+  group_root: {foreground: *red_bright}
 
 perms:
-  user_read: {foreground: *yellow}
-  user_write: {foreground: *pink}
-  user_execute_file: {foreground: *green}
-  user_execute_other: {foreground: *green}
+  user_read: {foreground: *yellow_bright}
+  user_write: {foreground: *red}
+  user_execute_file: {foreground: *green_bright}
+  user_execute_other: {foreground: *green_bright}
   group_read: {foreground: *cyan}
-  group_write: {foreground: *purple}
+  group_write: {foreground: *magenta}
   group_execute: {foreground: *green}
-  other_read: {foreground: *gray}
-  other_write: {foreground: *gray}
-  other_execute: {foreground: *gray}
-  special_user_file: {foreground: *red}
-  special_other: {foreground: *red}
-  attribute: {foreground: *gray}
+  other_read: {foreground: *dim}
+  other_write: {foreground: *dim}
+  other_execute: {foreground: *dim}
+  special_user_file: {foreground: *red_bright}
+  special_other: {foreground: *red_bright}
+  attribute: {foreground: *dim}
 
 size:
   major: {foreground: *yellow}
@@ -52,41 +59,41 @@ size:
   number_mega: {foreground: *yellow}
   number_giga: {foreground: *yellow}
   number_huge: {foreground: *yellow}
-  unit_byte: {foreground: *gray}
-  unit_kilo: {foreground: *gray}
-  unit_mega: {foreground: *gray}
-  unit_giga: {foreground: *gray}
-  unit_huge: {foreground: *gray}
+  unit_byte: {foreground: *dim}
+  unit_kilo: {foreground: *dim}
+  unit_mega: {foreground: *dim}
+  unit_giga: {foreground: *dim}
+  unit_huge: {foreground: *dim}
 
 git:
-  new: {foreground: *green}
-  modified: {foreground: *yellow}
-  deleted: {foreground: *red}
-  renamed: {foreground: *purple}
-  ignored: {foreground: *gray}
-  conflicted: {foreground: *red, is_bold: true}
+  new: {foreground: *green_bright}
+  modified: {foreground: *yellow_bright}
+  deleted: {foreground: *red_bright}
+  renamed: {foreground: *magenta_bright}
+  ignored: {foreground: *dim}
+  conflicted: {foreground: *red_bright, is_bold: true}
 
 git_repo:
-  branch_main: {foreground: *cyan, is_bold: true}
-  branch_other: {foreground: *purple}
-  git_clean: {foreground: *green}
-  git_dirty: {foreground: *yellow}
+  branch_main: {foreground: *blue_bright, is_bold: true}
+  branch_other: {foreground: *magenta}
+  git_clean: {foreground: *green_bright}
+  git_dirty: {foreground: *yellow_bright}
 
 file_type:
-  image: {foreground: *purple}
-  video: {foreground: *pink}
-  music: {foreground: *cyan}
-  crypto: {foreground: *green}
+  image: {foreground: *magenta_bright}
+  video: {foreground: *red}
+  music: {foreground: *cyan_bright}
+  crypto: {foreground: *green_bright}
   document: {foreground: *fg}
-  compressed: {foreground: *red}
-  temp: {foreground: *gray, is_dimmed: true}
+  compressed: {foreground: *red_bright}
+  temp: {foreground: *dim, is_dimmed: true}
   compiled: {foreground: *yellow}
   build: {foreground: *yellow, is_underline: true}
-  source: {foreground: *cyan}
+  source: {foreground: *blue_bright}
 
-date: {foreground: *gray}
-header: {foreground: *yellow, is_bold: true}
-punctuation: {foreground: *gray}
-broken_symlink: {foreground: *red}
-broken_path_overlay: {foreground: *red}
-control_char: {foreground: *pink}
+date: {foreground: *dim}
+header: {foreground: *yellow_bright, is_bold: true}
+punctuation: {foreground: *dim}
+broken_symlink: {foreground: *red_bright}
+broken_path_overlay: {foreground: *red_bright}
+control_char: {foreground: *magenta}
