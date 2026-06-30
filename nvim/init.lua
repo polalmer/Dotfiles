@@ -1,7 +1,5 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
 vim.opt.termguicolors = true
 vim.opt.number = true
@@ -18,7 +16,7 @@ vim.pack.add({
     --lualine
     'https://github.com/nvim-tree/nvim-web-devicons',
     'https://github.com/nvim-lualine/lualine.nvim',
-   --theme
+    --theme
     'https://github.com/savq/melange-nvim',
 })
 
@@ -34,10 +32,3 @@ require("lualine").setup({
     }
 })
 
-vim.lsp.config['zls'] = {
-    cmd = {'zls'},
-    filetypes = {'zig'},
-    root_markers = {'.git'},
-    settings = { Lua = { diagnostics = { globals = { "vim" } } } }
-}
-vim.lsp.enable('zls')
