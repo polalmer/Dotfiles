@@ -12,6 +12,7 @@ linkPath "$DOTFILES_DIR/nvim" "$CONFIG_TARGET/nvim"
 linkPath "$DOTFILES_DIR/fish" "$CONFIG_TARGET/fish"
 linkPath "$DOTFILES_DIR/eza" "$CONFIG_TARGET/eza"
 linkPath "$DOTFILES_DIR/alacritty" "$CONFIG_TARGET/alacritty"
+linkPath "$DOTFILES_DIR/fastfetch" "$CONFIG_TARGET/fastfetch"
 
 . ./scripts/linkFonts.sh
 linkFonts
