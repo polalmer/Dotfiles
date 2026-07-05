@@ -1,0 +1,78 @@
+[bar.default]
+background_opacity = 0.89999997988343239
+end = [
+    "media",
+    "tray",
+    "notifications",
+    "clipboard",
+    "network",
+    "bluetooth",
+    "volume",
+    "battery",
+    "spacer_2",
+    "control-center",
+    "session"
+]
+margin_edge = 0
+margin_ends = 0
+radius_top_left = -80
+radius_top_right = -80
+start = [ "launcher", "workspaces" ]
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 1280.0
+    cy = 1481.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_password_hint = true
+
+[shell]
+font_family = "FixedsysExcelsior Nerd Font"
+
+[theme]
+community_palette = "Cream"
+source = "community"
+
+[wallpaper]
+directory = "/home/polalmer/Dotfiles"
+
+    [wallpaper.default]
+    path = "/home/polalmer/Dotfiles/background.jpg"
+
+    [wallpaper.last]
+    path = "/home/polalmer/Dotfiles/background.jpg"
+
+[widget.media]
+hide_when_no_media = true
+
+[widget.network]
+show_label = false
+
+[widget.spacer_2]
+type = "spacer"
+
+[widget.workspaces]
+hide_when_empty = true
