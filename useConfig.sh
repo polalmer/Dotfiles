@@ -13,6 +13,7 @@ linkPath "$DOTFILES_DIR/fish" "$CONFIG_TARGET/fish"
 linkPath "$DOTFILES_DIR/eza" "$CONFIG_TARGET/eza"
 linkPath "$DOTFILES_DIR/alacritty" "$CONFIG_TARGET/alacritty"
 linkPath "$DOTFILES_DIR/fastfetch" "$CONFIG_TARGET/fastfetch"
+linkPath "$DOTFILES_DIR/noctalia" "$CONFIG_TARGET/noctalia"
 
 . ./scripts/linkFonts.sh
 linkFonts
