@@ -51,7 +51,6 @@ white      = "#ECE1D7"
 
 [keyboard]
 bindings = [
-   { key = "Return", mods = "Super", action = "SpawnNewInstance" }
 ]
 
 [window]
