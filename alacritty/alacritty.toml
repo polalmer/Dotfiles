@@ -51,12 +51,11 @@ white      = "#ECE1D7"
 
 [keyboard]
 bindings = [
-   { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+   { key = "Return", mods = "Super", action = "SpawnNewInstance" }
 ]
 
 [window]
-opacity=0.95
-padding={x=5,y=0}
+padding={x=2,y=2}
 
 [mouse]
 hide_when_typing=true
