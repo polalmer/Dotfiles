@@ -43,6 +43,7 @@
     <option name="FILESTATUS_changelistConflict" value="F65F87" />
     <option name="FILESTATUS_modifiedOutside" value="78DCE8" />
     <option name="GUTTER_BACKGROUND" value="121212" />
+    <option name="HTML_TAG_TREE_LEVEL2" value="E49749" />
     <option name="INDENT_GUIDE" value="333333" />
     <option name="INFORMATION_HINT" value="222222" />
     <option name="LINE_NUMBERS_COLOR" value="5B595C" />
@@ -561,7 +562,7 @@
     </option>
     <option name="DEFAULT_CLASS_NAME">
       <value>
-        <option name="FOREGROUND" value="9769ec" />
+        <option name="FOREGROUND" value="5e957a" />
       </value>
     </option>
     <option name="DEFAULT_CLASS_REFERENCE">
@@ -571,7 +572,7 @@
     </option>
     <option name="DEFAULT_COMMA">
       <value>
-        <option name="FOREGROUND" value="939293" />
+        <option name="FOREGROUND" value="ece1d7" />
       </value>
     </option>
     <option name="DEFAULT_CONSTANT">
@@ -605,7 +606,7 @@
     </option>
     <option name="DEFAULT_DOT">
       <value>
-        <option name="FOREGROUND" value="939293" />
+        <option name="FOREGROUND" value="ece1d7" />
       </value>
     </option>
     <option name="DEFAULT_ENTITY">
@@ -615,12 +616,12 @@
     </option>
     <option name="DEFAULT_FUNCTION_CALL">
       <value>
-        <option name="FOREGROUND" value="e87d10" />
+        <option name="FOREGROUND" value="e49749" />
       </value>
     </option>
     <option name="DEFAULT_FUNCTION_DECLARATION">
       <value>
-        <option name="FOREGROUND" value="e87d10" />
+        <option name="FOREGROUND" value="e49749" />
       </value>
     </option>
     <option name="DEFAULT_GLOBAL_VARIABLE">
@@ -630,7 +631,7 @@
     </option>
     <option name="DEFAULT_IDENTIFIER">
       <value>
-        <option name="FOREGROUND" value="a9d383" />
+        <option name="FOREGROUND" value="5e957a" />
       </value>
     </option>
     <option name="DEFAULT_INSTANCE_FIELD">
@@ -640,12 +641,12 @@
     </option>
     <option name="DEFAULT_INSTANCE_METHOD">
       <value>
-        <option name="FOREGROUND" value="e87d10" />
+        <option name="FOREGROUND" value="e49749" />
       </value>
     </option>
     <option name="DEFAULT_INTERFACE_NAME">
       <value>
-        <option name="FOREGROUND" value="9769ec" />
+        <option name="FOREGROUND" value="5e957a" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -657,7 +658,7 @@
     </option>
     <option name="DEFAULT_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="9769ec" />
+        <option name="FOREGROUND" value="b380b0" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -679,17 +680,17 @@
     </option>
     <option name="DEFAULT_METADATA">
       <value>
-        <option name="FOREGROUND" value="e30441" />
+        <option name="FOREGROUND" value="7aa5ce" />
       </value>
     </option>
     <option name="DEFAULT_NUMBER">
       <value>
-        <option name="FOREGROUND" value="9769ec" />
+        <option name="FOREGROUND" value="b380b0" />
       </value>
     </option>
     <option name="DEFAULT_OPERATION_SIGN">
       <value>
-        <option name="FOREGROUND" value="ece1d7" />
+        <option name="FOREGROUND" value="d47766" />
       </value>
     </option>
     <option name="DEFAULT_PARAMETER">
@@ -705,7 +706,7 @@
     </option>
     <option name="DEFAULT_PREDEFINED_SYMBOL">
       <value>
-        <option name="FOREGROUND" value="99ffae" />
+        <option name="FOREGROUND" value="facbfc" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -726,7 +727,7 @@
     </option>
     <option name="DEFAULT_SEMICOLON">
       <value>
-        <option name="FOREGROUND" value="939293" />
+        <option name="FOREGROUND" value="ece1d7" />
       </value>
     </option>
     <option name="DEFAULT_STATIC_FIELD">
@@ -737,12 +738,12 @@
     </option>
     <option name="DEFAULT_STATIC_METHOD">
       <value>
-        <option name="FOREGROUND" value="e87d10" />
+        <option name="FOREGROUND" value="e49749" />
       </value>
     </option>
     <option name="DEFAULT_STRING">
       <value>
-        <option name="FOREGROUND" value="ffb50e" />
+        <option name="FOREGROUND" value="7aa5ce" />
       </value>
     </option>
     <option name="DEFAULT_TAG">
@@ -929,12 +930,7 @@
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
-    <option name="HTML_ATTRIBUTE_NAME">
-      <value>
-        <option name="FOREGROUND" value="78dce8" />
-        <option name="FONT_TYPE" value="2" />
-      </value>
-    </option>
+    <option name="HTML_ATTRIBUTE_NAME" baseAttributes="DEFAULT_ATTRIBUTE" />
     <option name="HTML_ATTRIBUTE_VALUE">
       <value>
         <option name="FOREGROUND" value="ffd866" />
@@ -943,17 +939,18 @@
     <option name="HTML_CODE">
       <value />
     </option>
+    <option name="HTML_CUSTOM_TAG_NAME">
+      <value>
+        <option name="FOREGROUND" value="e87d10" />
+      </value>
+    </option>
     <option name="HTML_ENTITY_REFERENCE" baseAttributes="DEFAULT_ENTITY" />
     <option name="HTML_TAG">
       <value>
         <option name="FOREGROUND" value="939293" />
       </value>
     </option>
-    <option name="HTML_TAG_NAME">
-      <value>
-        <option name="FOREGROUND" value="ff6188" />
-      </value>
-    </option>
+    <option name="HTML_TAG_NAME" baseAttributes="DEFAULT_KEYWORD" />
     <option name="HTTP_HEADER_FIELD_VALUE">
       <value>
         <option name="FOREGROUND" value="f59762" />
@@ -2187,16 +2184,7 @@
         <option name="FOREGROUND" value="219598" />
       </value>
     </option>
-    <option name="PY.BUILTIN_NAME">
-      <value>
-        <option name="FOREGROUND" value="9769ec" />
-      </value>
-    </option>
-    <option name="PY.DECORATOR">
-      <value>
-        <option name="FOREGROUND" value="a9dc76" />
-      </value>
-    </option>
+    <option name="PY.BUILTIN_NAME" baseAttributes="DEFAULT_PREDEFINED_SYMBOL" />
     <option name="PY.KEYWORD_ARGUMENT">
       <value>
         <option name="FOREGROUND" value="89b3b6" />
@@ -2211,6 +2199,11 @@
       <value>
         <option name="FOREGROUND" value="78dce8" />
         <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="PY.SELF_PARAMETER">
+      <value>
+        <option name="FOREGROUND" value="e38de0" />
       </value>
     </option>
     <option name="PY.STRING">
