@@ -18,10 +18,14 @@ vim.pack.add({
     'https://github.com/nvim-lualine/lualine.nvim',
     --theme
     'https://github.com/savq/melange-nvim',
+    --Filetree
+    'https://github.com/nvim-tree/nvim-tree.lua'
 })
 
 require('completions')
 require('telescope')
+
+require('nvim-tree').setup()
 
 vim.cmd.colorscheme("melange")
 
