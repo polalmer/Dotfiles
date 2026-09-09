@@ -1,0 +1,40 @@
+" IdeaVim counterpart to ~/Dotfiles/nvim/init.lua
+
+" Editing ---------------------------------------------------------------
+set number
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+" Keep the existing useful search and viewport behaviour.
+set scrolloff=5
+set incsearch
+
+" Let JetBrains provide structural joining and keep refactor selections in
+" the current Vim mode.
+set ideajoin
+set idearefactormode=keep
+
+" IdeaVim implementations of the Vim plugins used here.
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+
+" Match Neovim's formatting mapping.
+map Q gq
+
+" Neovim: vim.diagnostic.open_float()
+nmap <C-e> <Action>(ShowErrorDescription)
+
+" Telescope equivalents -----------------------------------------------
+" These must be recursive mappings: IdeaVim does not support <Action>
+" targets in noremap mappings.
+nmap ff <Action>(GotoFile)
+nmap fg <Action>(FindInPath)
+nmap fb <Action>(RecentFiles)
+nmap fh <Action>(HelpTopics)
+
+" Completion -----------------------------------------------------------
+" PyCharm supplies the LSP, snippets, buffer/path suggestions and popup UI.
+" Its completion popup already owns Tab, Enter and navigation keys; Ctrl-Space
+" invokes completion, so no IdeaVim insert mappings are needed here.
