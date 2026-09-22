@@ -31,7 +31,7 @@ background = "#292522"
 
 [colors.normal]
 black      = "#34302C"
-red        = "#BD8183"
+red        = "#D47766"
 green      = "#78997A"
 yellow     = "#E49B5D"
 blue       = "#7F91B2"
@@ -41,7 +41,7 @@ white      = "#C1A78E"
 
 [colors.bright]
 black      = "#867462"
-red        = "#D47766"
+red        = "#BD8183"
 green      = "#85B695"
 yellow     = "#EBC06D"
 blue       = "#A3A9CE"
