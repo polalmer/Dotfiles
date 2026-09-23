@@ -2,7 +2,8 @@
 set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
-CONFIG_TARGET="${XDG_CONFIG_HOME:-$HOME/.config}"
+HOME_DIR="${XDG_CONFIG_HOME:-$HOME}"
+CONFIG_TARGET="$HOME_DIR/.config"
 
 . ./scripts/linkPath.sh
 echo "Linking dotfiles..."
@@ -14,7 +15,8 @@ linkPath "$DOTFILES_DIR/eza" "$CONFIG_TARGET/eza"
 linkPath "$DOTFILES_DIR/alacritty" "$CONFIG_TARGET/alacritty"
 linkPath "$DOTFILES_DIR/fastfetch" "$CONFIG_TARGET/fastfetch"
 linkPath "$DOTFILES_DIR/noctalia" "$CONFIG_TARGET/noctalia"
-
+linkPath "$DOTFILES_DIR/WiiCursor" "$HOME_DIR/.icons"
+:
 . ./scripts/linkFonts.sh
 linkFonts
 
