@@ -1,12 +1,10 @@
 # Dotfiles
-Install listed apps
+Needed apps
 - neovim
-    - treesitter-cli
 - fish
 - eza
 - alacritty
-- sway
-    - autotiling
+- mango (window manager)
 - noctalia >= v5
 - networkmanager
 - pipewire
