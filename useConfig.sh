@@ -5,6 +5,25 @@ DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 HOME_DIR="${XDG_CONFIG_HOME:-$HOME}"
 CONFIG_TARGET="$HOME_DIR/.config"
 
+echo "Linking dotfiles..."
+mkdir -p "$CONFIG_TARGET"
+linkPath "$DOTFILES_DIR/mango" "$CONFIG_TARGET/mango"
+linkPath "$DOTFILES_DIR/nvim" "$CONFIG_TARGET/nvim"
+linkPath "$DOTFILES_DIR/fish" "$CONFIG_TARGET/fish"
+linkPath "$DOTFILES_DIR/eza" "$CONFIG_TARGET/eza"
+linkPath "$DOTFILES_DIR/alacritty" "$CONFIG_TARGET/alacritty"
+linkPath "$DOTFILES_DIR/fastfetch" "$CONFIG_TARGET/fastfetch"
+linkPath "$DOTFILES_DIR/noctalia" "$CONFIG_TARGET/noctalia"
+linkPath "$DOTFILES_DIR/WiiCursor" "$HOME_DIR/.icons"
+echo "enable keyd"
+linkPath sudo "$DOTFILES_DIR/keyd" "/etc/keyd"
+sudo systemctl enable keyd --now
+echo "Linked dotfiles"
+
+linkFonts
+
+echo "Done."
+
 linkPath() {
     local source="$2"
     local target="$3"
@@ -72,22 +91,3 @@ linkFonts(){
         echo "fc-cache not found; font cache was not refreshed."
     fi
 }
-
-echo "Linking dotfiles..."
-mkdir -p "$CONFIG_TARGET"
-linkPath "$DOTFILES_DIR/mango" "$CONFIG_TARGET/mango"
-linkPath "$DOTFILES_DIR/nvim" "$CONFIG_TARGET/nvim"
-linkPath "$DOTFILES_DIR/fish" "$CONFIG_TARGET/fish"
-linkPath "$DOTFILES_DIR/eza" "$CONFIG_TARGET/eza"
-linkPath "$DOTFILES_DIR/alacritty" "$CONFIG_TARGET/alacritty"
-linkPath "$DOTFILES_DIR/fastfetch" "$CONFIG_TARGET/fastfetch"
-linkPath "$DOTFILES_DIR/noctalia" "$CONFIG_TARGET/noctalia"
-linkPath "$DOTFILES_DIR/WiiCursor" "$HOME_DIR/.icons"
-echo "enable keyd"
-linkPath sudo "$DOTFILES_DIR/keyd" "/etc/keyd"
-sudo systemctl enable keyd --now
-echo "Linked dotfiles"
-
-linkFonts
-
-echo "Done."

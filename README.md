@@ -1,6 +1,7 @@
 # Dotfiles
 Needed apps
 - neovim
+    - zls
 - fish
 - eza
 - alacritty
@@ -8,6 +9,5 @@ Needed apps
 - noctalia >= v5
 - networkmanager
 - pipewire
-    - piperwire pulse
 
 Run `./useConfig.sh` to symlink the repo folders
